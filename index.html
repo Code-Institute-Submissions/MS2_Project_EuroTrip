@@ -16,23 +16,24 @@
 <body>
 
 <header id="main-head">
-    
-  <nav class="navbar navbar-light bg-light">
-      
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+ 
+  <nav class="navbar navbar-light bg-transparent">
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
-    <div class="collapse nav-list" id="navbarToggleExternalContent">
-         <ul class="">
-             <ul><a href="#map">Map</a></ul>
-             <ul><a href="#places">Places</a></ul>
-             <ul><a href="#Trending">Trending</a></ul>
-         </ul>
-    </div>     
-    
   </nav>
-    
+
+<div class="collapse ml-auto" id="navbarToggleExternalContent">
+    <div class="bg-light p-4 nav-list">
+      <ul class="">
+             <li><a href="#search">Map</a></li>
+             <li><a href="#map">Map</a></li>
+             <li><a href="#places">Places</a></li>
+             <li><a href="#trending">Trending</a></li>
+         </ul>
+    </div>
+ </div>
+
 </header>
 
 <section class="mx-auto container-fluid pl-0 pr-0">
@@ -71,7 +72,7 @@
 </section>
 
 
-<section class="mx-auto container no-gutters bg-light mt-5">
+<section id="map" class="mx-auto container no-gutters bg-light mt-5">
     <div class="row">
         <div class="col-12">
             Map section
@@ -79,7 +80,7 @@
     </div>
 </section>
 
-<section class="mx-auto container no-gutters bg-secondary mt-5">
+<section id="places" class="mx-auto container no-gutters bg-secondary mt-5">
     <div class="row">
         <div class="col-12">
             Places Section
@@ -87,7 +88,7 @@
     </div>
 </section>
 
-<section class=" mx-auto container no-gutters mt-5 bg-light">
+<section id="trending" class=" mx-auto container no-gutters mt-5 bg-light">
     <div class="row">
         <div class="col-12">
             Wiki/trending section
