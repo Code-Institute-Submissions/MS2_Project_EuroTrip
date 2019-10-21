@@ -6,3 +6,8 @@
 .searchbox {
     width: 100%;
 }
+
+.search-bar-sub-header {
+    text-align: center;
+    font-size: 10px;
+}
