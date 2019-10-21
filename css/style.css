@@ -1,12 +1,15 @@
 #main-head {
-    height: 90vh;
+    height: 50vh;
     width: 100vw;
 }
 
+
+
 .nav-list{
     text-align: right;
-    
 }
+
+
 
 .search-bar-header {
     text-align: center;
