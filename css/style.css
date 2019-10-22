@@ -1,3 +1,5 @@
+/*   navbar      */
+
 #main-head {
     height: 9vh;
     width: 100vw;
@@ -16,6 +18,8 @@
     list-style-type: none;
     font-size: 25px;
 }
+
+/*   search bar      */
 
 .search-bar-header {
     text-align: center;
@@ -42,3 +46,11 @@ position: absolute;
 .search-margin {
     margin-top: 10em;
 }
+
+
+/*   Google maps section      */
+
+#map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
