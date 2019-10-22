@@ -35,14 +35,6 @@
     font-size: 10px;
 }
 
-#searchContainer {
-position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  background-color: red;
-  background: red;
-}
 .search-margin {
     margin-top: 10em;
 }
