@@ -1,33 +1,4 @@
-/*var map;
-var service;
-var infowindow;
 
-function initialize() {
-  var pyrmont = new google.maps.LatLng(-33.8665433,151.1956316);
-
-  map = new google.maps.Map(document.getElementById('map'), {
-      center: pyrmont,
-      zoom: 15
-    });
-
-  var request = {
-    location: pyrmont,
-    radius: '500',
-    type: ['restaurant']
-  };
-
-  service = new google.maps.places.PlacesService(map);
-  service.nearbySearch(request, callback);
-}
-
-function callback(results, status) {
-  if (status == google.maps.places.PlacesServiceStatus.OK) {
-    for (var i = 0; i < results.length; i++) {
-      var place = results[i];
-      createMarker(results[i]);
-    }
-  }
-}*/
  function initMap() {
 
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -73,20 +44,24 @@ function callback(results, status) {
             label: labels[i % labels.length]
           });
         });
+        
 
         // Add a marker clusterer to manage the markers.
         var markerCluster = new MarkerClusterer(map, markers,
             {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
       }
+      
+
+      
       var locations = [
-        {lat: 52.520008, lng: 13.404954}, //berlin
-        {lat: 51.507351, lng: -0.127758}, // london
-        {lat: 52.370216, lng: 4.895168}, //amsterdam
-        {lat: 53.349804, lng: -6.260310}, //dublin
-        {lat: 53.480759, lng: -2.242631}, //manchester
-        {lat: 48.856613, lng: 2.352222}, //paris
-        {lat: 41.385063, lng: 2.173404}, //barcelona
-        {lat: 40.416775, lng: -3.703790}, //madrid
-        {lat: 59.913868, lng: 10.752245}, //oslo
-        {lat: 54.597286, lng: -5.930120}, //belfast
+        {lat: 52.520008, lng: 13.404954, cost: 130}, //berlin
+        {lat: 51.507351, lng: -0.127758, cost: 90}, // london
+        {lat: 52.370216, lng: 4.895168, cost: 130}, //amsterdam
+        {lat: 53.349804, lng: -6.260310, cost: 50}, //dublin
+        {lat: 53.480759, lng: -2.242631, cost: 40}, //manchester
+        {lat: 48.856613, lng: 2.352222, cost: 240}, //paris
+        {lat: 41.385063, lng: 2.173404, cost: 130}, //barcelona
+        {lat: 40.416775, lng: -3.703790, cost: 180}, //madrid
+        {lat: 59.913868, lng: 10.752245, cost: 230}, //oslo
+        {lat: 54.597286, lng: -5.930120, cost: 50}, //belfast
       ];
