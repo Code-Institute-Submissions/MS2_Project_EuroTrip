@@ -9,7 +9,7 @@
     height: 80vh;
     width: 100vw;
     margin-top: 20em;
-    background: url(https://wordpress-network.prod.aws.skyscnr.com/wp-content/uploads/2018/05/new-york-city-187703420.jpg);
+    background: url("https://wordpress-network.prod.aws.skyscnr.com/wp-content/uploads/2018/05/new-york-city-187703420.jpg");
     background-size: cover;
 }
 
