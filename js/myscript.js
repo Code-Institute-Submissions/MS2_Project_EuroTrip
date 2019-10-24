@@ -151,10 +151,10 @@ $('#submitButton').click(function(){
 
 
   if (searchValue < 100) {
-    alert("The name may have no more than 10 characters");
+    alert("less than 100");
     return 
   } else if (searchValue >= 100 && searchValue < 200){
-    alert("The name less 200 characters");
+    alert("between 100 and 200");
   } else {
     alert("over 200 kid");
   }
