@@ -152,11 +152,13 @@ $('#submitButton').click(function(){
 
   if (searchValue < 100) {
     alert("less than 100");
-    return 
+    //return locations = locations.filter(number => number < 100);   return the places in the array less than 100
   } else if (searchValue >= 100 && searchValue < 200){
     alert("between 100 and 200");
+    //return locations = locations.filter(number => number >= 100 && < 200); return the places in the array in between 100 and 200
   } else {
-    alert("over 200 kid");
+    alert("over 200");
+    //return locations = locations.filter(number => number >= 200); return the places in the array over 200
   }
 
 
