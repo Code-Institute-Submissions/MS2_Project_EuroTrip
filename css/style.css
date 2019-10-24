@@ -46,3 +46,9 @@
         height: 400px;  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
        }
+
+.placesTest {
+    height: 40em;
+    width: 40em;
+    background: url("https://wordpress-network.prod.aws.skyscnr.com/wp-content/uploads/2018/05/new-york-city-187703420.jpg");
+}

@@ -8,16 +8,16 @@ function initMap() {
 }
 
  var locations = [
-        ['130', 52.520008, 13.404954, 130], //berlin
-        ['90', 51.507351, -0.127758, 90], // london
-        ['130', 52.370216, 4.895168, 130], //amsterdam
-        ['50', 53.349804, -6.260310, 50], //dublin
-        ['40', 53.480759, -2.242631, 40], //manchester
-        ['240', 48.856613, 2.352222, 240], //paris
-        ['130', 41.385063, 2.173404, 130], //barcelona
-        ['180', 40.416775, -3.703790, 180], //madrid
-        ['230', 59.913868, 10.752245, 230], //oslo
-        ['50', 54.597286, -5.930120, 50], //belfast
+        ['130', 52.520008, 13.404954, 130, 'berlin'], //berlin
+        ['90', 51.507351, -0.127758, 90, 'london'], // london
+        ['130', 52.370216, 4.895168, 130, 'amsterdam'], //amsterdam
+        ['50', 53.349804, -6.260310, 50, 'dublin'], //dublin
+        ['40', 53.480759, -2.242631, 40, 'manchester'], //manchester
+        ['240', 48.856613, 2.352222, 240, 'paris'], //paris
+        ['130', 41.385063, 2.173404, 130, 'barcelona'], //barcelona
+        ['180', 40.416775, -3.703790, 180, 'madrid'], //madrid
+        ['230', 59.913868, 10.752245, 230, 'oslo'], //oslo
+        ['50', 54.597286, -5.930120, 50, 'belfast'], //belfast
       ];
 
 function setMarkers(map) {
@@ -28,13 +28,20 @@ function setMarkers(map) {
     var marker = new google.maps.Marker({
       position: {lat: location[1], lng: location[2]},
       map: map,
-      
       title: location[0],
+      label: locations[3]
     });
   }
 }
 
+// testing out jquery, to be used to add places info to the places section when a marker is clicked
+$('#submitButton').click(function(){
+  $('#places').addClass('placesTest');
+});
 
+ marker.addListener('click', function() {
+   $('#places').addClass('placesTest');
+});
 
 /*
  function initMap() {
