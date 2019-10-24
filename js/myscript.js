@@ -17,7 +17,7 @@ function initMap() {
         ['130', 41.385063, 2.173404, 130, 'barcelona'], //barcelona
         ['180', 40.416775, -3.703790, 180, 'madrid'], //madrid
         ['230', 59.913868, 10.752245, 230, 'oslo'], //oslo
-        ['50', 54.597286, -5.930120, 50, 'belfast'], //belfast
+        ['50', 54.597286, -5.930120, 50, "belfast"], //belfast
       ];
 
 function setMarkers(map) {
@@ -31,6 +31,7 @@ function setMarkers(map) {
       title: location[0],
       label: locations[3]
     });
+    console.log(marker);
   }
 }
 
@@ -42,6 +43,10 @@ $('#submitButton').click(function(){
  marker.addListener('click', function() {
    $('#places').addClass('placesTest');
 });
+
+
+//filter function for search bar
+
 
 /*
  function initMap() {
@@ -113,15 +118,29 @@ $('#submitButton').click(function(){
       ];
   */
   /*    
-      let budget = locations.filter(function(price){
+      let budgetInput = locations.filter(function(price){
         if (price <= 100) {
           return price.cost <=100;
         } else if (price > 100 && price <= 200) {
           return price.cost > 100 && <= 200;
         } else {
-          return price.cost;
+          return price.cost;    <-i want to return the locations that are available for that price
         }
       });
       
       console.log(budget);
       */
+      
+      
+
+      function checkPrice(price) {
+        return age >= 18;
+      }
+      
+      function myFunction() {
+        document.getElementById("trending").innerHTML = locations[3].filter(checkAdult);
+      }
+      
+      console.log(locations[3]);
+      
+      
