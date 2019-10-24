@@ -7,7 +7,7 @@
         });
 
           var request = {
-          placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4',
+          placeId: 'place_id',
           fields: ['name', 'formatted_address', 'place_id', 'geometry']
         };
 
@@ -31,8 +31,8 @@
         });
 
 
-        // Create an array of alphabetical characters used to label the markers.
-        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        // Create an array of the cities used to label the markers.
+        var cityNames = ["Berlin", "London", "Amsterdam", "Dublin", "Manchester", "Paris", "Barcelona", "Madrid", "Oslo", "Belfast"];
 
         // Add some markers to the map.
         // Note: The code uses the JavaScript Array.prototype.map() method to
@@ -41,7 +41,7 @@
         var markers = locations.map(function(location, i) {
           return new google.maps.Marker({
             position: location,
-            label: labels[i % labels.length]
+            label: cityNames[i % cityNames.length]
           });
         });
         
@@ -49,10 +49,10 @@
         // Add a marker clusterer to manage the markers.
         var markerCluster = new MarkerClusterer(map, markers,
             {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-      }
-      
+     }
+    
 
-      
+
       var locations = [
         {lat: 52.520008, lng: 13.404954, cost: 130}, //berlin
         {lat: 51.507351, lng: -0.127758, cost: 90}, // london
