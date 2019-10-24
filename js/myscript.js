@@ -29,20 +29,19 @@ function setMarkers(map) {
       position: {lat: location[1], lng: location[2]},
       map: map,
       title: location[0],
-      label: locations[3]
+      //label: location[3]  - might try add lable to icons
     });
-    console.log(marker);
   }
 }
 
-// testing out jquery, to be used to add places info to the places section when a marker is clicked
+/* testing out jquery, to be used to add places info to the places section when a marker is clicked
 $('#submitButton').click(function(){
   $('#places').addClass('placesTest');
 });
 
  marker.addListener('click', function() {
    $('#places').addClass('placesTest');
-});
+});*/
 
 
 //filter function for search bar
@@ -129,7 +128,7 @@ $('#submitButton').click(function(){
       });
       
       console.log(budget);
-      */
+      
       
       
 
@@ -140,7 +139,25 @@ $('#submitButton').click(function(){
       function myFunction() {
         document.getElementById("trending").innerHTML = locations[3].filter(checkAdult);
       }
+      */
       
-      console.log(locations[3]);
+      //testing how to access array data
+      for (var i = 0; i < locations.length; i++) {
+      console.log(locations[i][2], locations[i][1]);}
       
       
+  function getSearchValue() {
+  var searchValue = document.getElementById("locationsGenerator").value;
+
+
+  if (searchValue < 100) {
+    alert("The name may have no more than 10 characters");
+    return 
+  } else if (searchValue >= 100 && searchValue < 200){
+    alert("The name less 200 characters");
+  } else {
+    alert("over 200 kid");
+  }
+
+
+}

@@ -55,9 +55,9 @@
     <div class="row mt-3">
         <div class="col-8 mx-auto">
             <div class="row">
-                
+                    
                     <div class="col-6 ml-auto mr-1 pr-0">
-                        <input id="locationsGenerator" class="form-control searchbox" type="search" placeholder="Budget?" aria-label="Search">
+                        <input id="locationsGenerator" class="form-control searchbox" type="number" placeholder="Budget?" aria-label="Search">
                     </div>      
                     <div class="col-4 mr-auto pl-0">
                         
@@ -69,9 +69,10 @@
                               
                         <button type="button" class="btn btn-outline-success mx-auto dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">In</button>
                           
-                        <button id="submitButton" class="btn btn-outline-success mx-auto" type="submit">Search</button>
+                        <button id="submitButton" onclick="getSearchValue()" class="btn btn-outline-success mx-auto" type="submit">Search</button>
                         
                     </div>
+                    
             </div>
         </div>
     </div>
@@ -87,8 +88,8 @@
     </div>
 </section>
 
-<section id="places" class="mx-auto container no-gutters bg-secondary mt-5">
-    <div id="places" class="row">
+<section class="mx-auto container no-gutters bg-secondary mt-5">
+    <div class="row">
         <div id="places" class="col-12">
             Places Section
         </div>
