@@ -142,24 +142,72 @@ $('#submitButton').click(function(){
       */
       
       //testing how to access array data
-      for (var i = 0; i < locations.length; i++) {
-      console.log(locations[i][2], locations[i][1]);}
+    //  for (var i = 0; i < locations.length; i++) {
+    //  console.log(locations[i][3], locations[i][1]);}
+ 
+ testValue = [12, 14, 16, 19, 20, 30];     
       
-      
-  function getSearchValue() {
-  var searchValue = document.getElementById("locationsGenerator").value;
+  //function getSearchValue() {
+  
+//  var locatFilter = locations.filter(function(price){
+  
+/*  for (var i = 0; i < locations.length; i++) {
+    
+    if (searchValue < 100) {
+      alert("less than 100");
+      return price[i][3] < 100;
+      //return loactions = locations.filter(number => number < 100);  // return the places in the array less than 100
+    } else if (searchValue >= 100 && searchValue < 200){
+      alert("between 100 and 200");
+      return price[i][3] >= 100 && price[i][3] < 200;
+      //var locations = locations[i][3] >= 100;
+      //return locations = locations.filter(number => number >= 100 && < 200); return the places in the array in between 100 and 200
+    } else {
+      alert("over 200");
+      return price[i][3] >= 200;
+      //return locations = locations.filter(number => number >= 200); return the places in the array over 200
+    }
+    }
+  });
+  console.log(locatFilter);
+ // }
+ 
+ var ages = [32, 33, 12, 40];
+*/
+
+var searchValue = document.getElementById("locationsGenerator").value;
+var newLocations = [];
 
 
-  if (searchValue < 100) {
-    alert("less than 100");
-    //return locations = locations.filter(number => number < 100);   return the places in the array less than 100
-  } else if (searchValue >= 100 && searchValue < 200){
-    alert("between 100 and 200");
-    //return locations = locations.filter(number => number >= 100 && < 200); return the places in the array in between 100 and 200
-  } else {
-    alert("over 200");
-    //return locations = locations.filter(number => number >= 200); return the places in the array over 200
-  }
 
-
+for (var i = 0; i < locations.length; i++) {
+  console.log(locations[i][3] <100);
+  
 }
+  /*
+  newLocations.push(locations[i]);
+  console.log(newLocations[i]);
+} if (searchValue <100) {
+  
+  newLocations.push(locations[i]);
+  console.log(newLocations[i]);
+}
+
+
+  if (searchValue <100) {
+    newLocations.push(locations[i][3] <100);
+    //var newLocations = (locations[i][3] <100)
+    console.log(newLocations);
+  } else if (searchValue >= 100 && searchValue < 200) {
+   
+    var newLocations = ((locations[i][3] <100) && (locations[i][3] <=200))
+    console.log(newLocations);
+  } else {
+    
+    var newLocations = (locations[i][3] > 200)
+    console.log(newLocations);
+  }
+  }*/
+
+
+
