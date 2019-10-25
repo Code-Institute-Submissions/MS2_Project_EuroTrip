@@ -20,15 +20,29 @@ function initMap() {
         ['50', 54.597286, -5.930120, 50, "belfast"], //belfast
       ];
 
+var locationz = [
+        {lat: 52.520008, lng: 13.404954, cost: 130, name: 'berlin'}, //berlin
+        {lat: 51.507351, lng: -0.127758, cost: 90, name: 'london'}, // london
+        {lat: 52.370216, lng: 4.895168, cost: 130, name: 'amsterdam'}, //amsterdam
+        {lat: 53.349804, lng: -6.260310, cost: 50, name: 'dublin'}, //dublin
+        {lat: 53.480759, lng: -2.242631, cost: 40, name: 'manchester'}, //manchester
+        {lat: 48.856613, lng: 2.352222, cost: 240, name: 'paris'}, //paris
+        {lat: 41.385063, lng: 2.173404, cost: 130, name: 'barcelona'}, //barcelona
+        {lat: 40.416775, lng: -3.703790, cost: 180, name: 'madrid'}, //madrid
+        {lat: 59.913868, lng: 10.752245, cost: 230, name: 'oslo'}, //oslo
+        {lat: 54.597286, lng: -5.930120, cost: 50, name: 'belfast'}, //belfast
+      ];
+
 function setMarkers(map) {
   // Adds markers to the map.
 
-  for (var i = 0; i < locations.length; i++) {
-    var location = locations[i];
+  for (var i = 0; i < locationz.length; i++) {
+    var location = locationz[i];
     var marker = new google.maps.Marker({
-      position: {lat: location[1], lng: location[2]},
+     // position: {lat: location[1], lng: location[2]},
+      position: {lat: location.lat, lng: location.lng},
       map: map,
-      title: location[0],
+      title: location.name,
       //label: location[3]  - might try add lable to icons
     });
   }
@@ -44,7 +58,6 @@ $('#submitButton').click(function(){
 });*/
 
 
-//filter function for search bar
 
 
 /*
@@ -80,118 +93,31 @@ $('#submitButton').click(function(){
         });
 
 
-        // Create an array of the cities used to label the markers.
-        var cityNames = ["Berlin", "London", "Amsterdam", "Dublin", "Manchester", "Paris", "Barcelona", "Madrid", "Oslo", "Belfast"];
-
-        // Add some markers to the map.
-        // Note: The code uses the JavaScript Array.prototype.map() method to
-        // create an array of markers based on a given "locations" array.
-        // The map() method here has nothing to do with the Google Maps API.
-        var markers = locations.map(function(location, i) {
-          return new google.maps.Marker({
-            position: location,
-            label: cityNames[i % cityNames.length]
-          });
-        });
-        
-
-        // Add a marker clusterer to manage the markers.
-       // var markerCluster = new MarkerClusterer(map, markers,
-            //{imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-            setMarkers(map);
-     }
-*/    
-
-/*
-      var locations = [
-        {lat: 52.520008, lng: 13.404954, cost: 130}, //berlin
-        {lat: 51.507351, lng: -0.127758, cost: 90}, // london
-        {lat: 52.370216, lng: 4.895168, cost: 130}, //amsterdam
-        {lat: 53.349804, lng: -6.260310, cost: 50}, //dublin
-        {lat: 53.480759, lng: -2.242631, cost: 40}, //manchester
-        {lat: 48.856613, lng: 2.352222, cost: 240}, //paris
-        {lat: 41.385063, lng: 2.173404, cost: 130}, //barcelona
-        {lat: 40.416775, lng: -3.703790, cost: 180}, //madrid
-        {lat: 59.913868, lng: 10.752245, cost: 230}, //oslo
-        {lat: 54.597286, lng: -5.930120, cost: 50}, //belfast
-      ];
-  */
-  /*    
-      let budgetInput = locations.filter(function(price){
-        if (price <= 100) {
-          return price.cost <=100;
-        } else if (price > 100 && price <= 200) {
-          return price.cost > 100 && <= 200;
-        } else {
-          return price.cost;    <-i want to return the locations that are available for that price
-        }
-      });
-      
-      console.log(budget);
-      
-      
-      
-
-      function checkPrice(price) {
-        return age >= 18;
-      }
-      
-      function myFunction() {
-        document.getElementById("trending").innerHTML = locations[3].filter(checkAdult);
-      }
-      */
-      
-      //testing how to access array data
-    //  for (var i = 0; i < locations.length; i++) {
-    //  console.log(locations[i][3], locations[i][1]);}
- 
- testValue = [12, 14, 16, 19, 20, 30];     
-      
-  //function getSearchValue() {
-  
-//  var locatFilter = locations.filter(function(price){
+// Create an array of the cities used to label the markers.
+var cityNames = ["Berlin", "London", "Amsterdam", "Dublin", "Manchester", "Paris", "Barcelona", "Madrid", "Oslo", "Belfast"];
   
 /*  for (var i = 0; i < locations.length; i++) {
-    
-    if (searchValue < 100) {
-      alert("less than 100");
-      return price[i][3] < 100;
-      //return loactions = locations.filter(number => number < 100);  // return the places in the array less than 100
-    } else if (searchValue >= 100 && searchValue < 200){
-      alert("between 100 and 200");
-      return price[i][3] >= 100 && price[i][3] < 200;
-      //var locations = locations[i][3] >= 100;
-      //return locations = locations.filter(number => number >= 100 && < 200); return the places in the array in between 100 and 200
-    } else {
-      alert("over 200");
-      return price[i][3] >= 200;
-      //return locations = locations.filter(number => number >= 200); return the places in the array over 200
-    }
-    }
+
   });
-  console.log(locatFilter);
- // }
- 
- var ages = [32, 33, 12, 40];
+
 */
 
-var searchValue = document.getElementById("locationsGenerator").value;
-var newLocations = [];
 
 
+let newLocations = locationz;
 
-for (var i = 0; i < locations.length; i++) {
-  console.log(locations[i][3] <100);
-  
-}
-  /*
-  newLocations.push(locations[i]);
-  console.log(newLocations[i]);
-} if (searchValue <100) {
-  
-  newLocations.push(locations[i]);
-  console.log(newLocations[i]);
-}
+function getSearchValue() {
+
+let searchValue = document.getElementById("locationsGenerator").value;
+
+let newLocations = locationz.filter(function(place) {
+  return place.cost <= searchValue;
+});
+console.log(newLocations);
+};
+
+/*
+
 
 
   if (searchValue <100) {
@@ -207,7 +133,20 @@ for (var i = 0; i < locations.length; i++) {
     var newLocations = (locations[i][3] > 200)
     console.log(newLocations);
   }
-  }*/
+  }
+  
+function getSearchValue() {
+  var searchValue = document.getElementById("locationsGenerator").value;
 
 
+  if (searchValue < 100) {
+    alert("The name may have no more than 10 characters");
+    return 
+  } else if (searchValue >= 100 && searchValue < 200){
+    alert("The name less 200 characters");
+  } else {
+    alert("over 200 kid");
+  }
 
+
+}*/
