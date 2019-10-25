@@ -42,7 +42,7 @@ function setMarkers(map) {
      // position: {lat: location[1], lng: location[2]},
       position: {lat: location.lat, lng: location.lng},
       map: map,
-      title: location.name,
+      title: location.cost
       //label: location[3]  - might try add lable to icons
     });
   }
@@ -95,16 +95,12 @@ $('#submitButton').click(function(){
 
 // Create an array of the cities used to label the markers.
 var cityNames = ["Berlin", "London", "Amsterdam", "Dublin", "Manchester", "Paris", "Barcelona", "Madrid", "Oslo", "Belfast"];
-  
-/*  for (var i = 0; i < locations.length; i++) {
-
-  });
 
 */
 
 
 
-let newLocations = locationz;
+let newLocations;
 
 function getSearchValue() {
 
@@ -116,37 +112,4 @@ let newLocations = locationz.filter(function(place) {
 console.log(newLocations);
 };
 
-/*
 
-
-
-  if (searchValue <100) {
-    newLocations.push(locations[i][3] <100);
-    //var newLocations = (locations[i][3] <100)
-    console.log(newLocations);
-  } else if (searchValue >= 100 && searchValue < 200) {
-   
-    var newLocations = ((locations[i][3] <100) && (locations[i][3] <=200))
-    console.log(newLocations);
-  } else {
-    
-    var newLocations = (locations[i][3] > 200)
-    console.log(newLocations);
-  }
-  }
-  
-function getSearchValue() {
-  var searchValue = document.getElementById("locationsGenerator").value;
-
-
-  if (searchValue < 100) {
-    alert("The name may have no more than 10 characters");
-    return 
-  } else if (searchValue >= 100 && searchValue < 200){
-    alert("The name less 200 characters");
-  } else {
-    alert("over 200 kid");
-  }
-
-
-}*/
