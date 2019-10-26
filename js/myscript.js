@@ -5,9 +5,10 @@ function initMap() {
   });
 
   setMarkers(map);
+
 }
 
- var locations = [
+var locations = [
         ['130', 52.520008, 13.404954, 130, 'berlin'], //berlin
         ['90', 51.507351, -0.127758, 90, 'london'], // london
         ['130', 52.370216, 4.895168, 130, 'amsterdam'], //amsterdam
@@ -42,9 +43,12 @@ function setMarkers(map) {
      // position: {lat: location[1], lng: location[2]},
       position: {lat: location.lat, lng: location.lng},
       map: map,
-      title: location.cost
+      title: `${location.name} : €${location.cost}`
       //label: location[3]  - might try add lable to icons
+      //icon: 'might add a new marke in here'
     });
+    
+    
   }
 }
 
@@ -55,7 +59,11 @@ $('#submitButton').click(function(){
 
  marker.addListener('click', function() {
    $('#places').addClass('placesTest');
-});*/
+*/
+google.maps.event.addListener(marker,'click', function() {
+  $('places').text("test");
+   $('#places').addClass('placesTest');
+});
 
 
 
