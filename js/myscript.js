@@ -5,11 +5,7 @@ function initMap() {
   });
 
   setMarkers(map);
-  
-google.maps.event.addListener(map,'click', function() {
-  $('places').text("test");
-  $('#places').addClass('placesTest');
-});
+
 
 }
 
@@ -42,6 +38,8 @@ var locationz = [
 function setMarkers(map) {
   // Adds markers to the map.
 
+
+
   for (var i = 0; i < locationz.length; i++) {
     var location = locationz[i];
     var marker = new google.maps.Marker({
@@ -53,22 +51,19 @@ function setMarkers(map) {
       //icon: 'might add a new marke in here'
     });
     
+    google.maps.event.addListener(marker,'click', function() {
+    $('places').text("test");
+    $('#places').addClass('placesTest');
+    });
     
   }
 }
 
 /* testing out jquery, to be used to add places info to the places section when a marker is clicked
-$('#submitButton').click(function(){
-  $('#places').addClass('placesTest');
-});
 
  marker.addListener('click', function() {
    $('#places').addClass('placesTest');
 */
-google.maps.event.addListener(marker,'click', function() {
-  $('places').text("test");
-   $('#places').addClass('placesTest');
-});
 
 
 
