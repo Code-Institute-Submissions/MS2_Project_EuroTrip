@@ -5,6 +5,11 @@ function initMap() {
   });
 
   setMarkers(map);
+  
+google.maps.event.addListener(map,'click', function() {
+  $('places').text("test");
+  $('#places').addClass('placesTest');
+});
 
 }
 
