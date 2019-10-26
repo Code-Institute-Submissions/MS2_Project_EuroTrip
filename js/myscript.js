@@ -9,6 +9,8 @@ function initMap() {
 
 }
 
+let newLocations;
+
 var locations = [
         ['130', 52.520008, 13.404954, 130, 'berlin'], //berlin
         ['90', 51.507351, -0.127758, 90, 'london'], // london
@@ -23,22 +25,43 @@ var locations = [
       ];
 
 var locationz = [
-        {lat: 52.520008, lng: 13.404954, cost: 130, name: 'berlin'}, //berlin
-        {lat: 51.507351, lng: -0.127758, cost: 90, name: 'london'}, // london
-        {lat: 52.370216, lng: 4.895168, cost: 130, name: 'amsterdam'}, //amsterdam
-        {lat: 53.349804, lng: -6.260310, cost: 50, name: 'dublin'}, //dublin
-        {lat: 53.480759, lng: -2.242631, cost: 40, name: 'manchester'}, //manchester
-        {lat: 48.856613, lng: 2.352222, cost: 240, name: 'paris'}, //paris
-        {lat: 41.385063, lng: 2.173404, cost: 130, name: 'barcelona'}, //barcelona
-        {lat: 40.416775, lng: -3.703790, cost: 180, name: 'madrid'}, //madrid
-        {lat: 59.913868, lng: 10.752245, cost: 230, name: 'oslo'}, //oslo
-        {lat: 54.597286, lng: -5.930120, cost: 50, name: 'belfast'}, //belfast
+        {lat: 52.520008, lng: 13.404954, cost: 130, name: 'Berlin'}, //berlin
+        {lat: 51.507351, lng: -0.127758, cost: 90, name: 'London'}, // london
+        {lat: 52.370216, lng: 4.895168, cost: 130, name: 'Amsterdam'}, //amsterdam
+        {lat: 53.349804, lng: -6.260310, cost: 50, name: 'Dublin'}, //dublin
+        {lat: 53.480759, lng: -2.242631, cost: 40, name: 'Manchester'}, //manchester
+        {lat: 48.856613, lng: 2.352222, cost: 240, name: 'Paris'}, //paris
+        {lat: 41.385063, lng: 2.173404, cost: 130, name: 'Barcelona'}, //barcelona
+        {lat: 40.416775, lng: -3.703790, cost: 180, name: 'Madrid'}, //madrid
+        {lat: 59.913868, lng: 10.752245, cost: 230, name: 'Oslo'}, //oslo
+        {lat: 54.597286, lng: -5.930120, cost: 50, name: 'Belfast'},
+        {lat: 41.157944, lng: -8.629105, cost: 120, name: 'Porto'},
+        {lat: 28.291565, lng: -16.629129, cost: 220, name: 'Tenerife'},
+        {lat: 47.376888, lng: 8.541694, cost: 280, name: 'Zurich'},
+        {lat: 50.937531, lng: 6.960279, cost: 230, name: 'Cologne'},
+        {lat: 48.135124, lng: 11.581981, cost: 320, name: 'Munich'},
+        {lat: 37.983810, lng: 23.727539, cost: 380, name: 'Athens'},
+        {lat: 50.850346, lng: 4.351721, cost: 70, name: 'Brussels'},
+        {lat: 43.738419, lng: 7.424616, cost: 250, name: 'Monaco'},
+        {lat: 55.755825, lng: 37.617298, cost: 380, name: 'Moscow'},
+        {lat: 50.075539, lng: 14.437800, cost: 170, name: 'Prague'},
+        {lat: 64.126518, lng: -21.817438, cost: 245, name: 'Reykjavik'},
+        {lat: 59.329323, lng: 18.068581, cost: 260, name: 'Stockholm'},
+        {lat: 59.913868, lng: 12.453389, cost: 320, name: 'Vatican City'},
+        {lat: 48.208176, lng: 16.373819, cost: 235, name: 'Vienna'},
+        {lat: 52.229675, lng: 21.012230, cost: 215, name: 'Warsaw'},
+        {lat: 50.064651, lng: 19.944981, cost: 175, name: 'Krakow'},
+        {lat: 41.902782, lng: 12.496365, cost: 225, name: 'Rome'},
+        {lat: 53.551086, lng: 9.993682, cost: 290, name: 'Hamburg'},
+        {lat: 55.953251, lng: -3.188267, cost: 60, name: 'Edinburgh'},
+        {lat: 45.440845, lng: 12.315515, cost: 330, name: 'Venice'},
+        {lat: 45.464203, lng: 9.189982, cost: 360, name: 'Milan'},
+        {lat: 42.650661, lng: 18.094423, cost: 230, name: 'Dubrovnik'},
+        {lat: 45.440845, lng: 12.315515, cost: 340, name: 'Venice'}
       ];
 
 function setMarkers(map) {
   // Adds markers to the map.
-
-
 
   for (var i = 0; i < locationz.length; i++) {
     var location = locationz[i];
@@ -52,14 +75,33 @@ function setMarkers(map) {
     });
     
     google.maps.event.addListener(marker,'click', function() {
-    $('places').text("test");
+    $('#places').text("${location.name}");
     $('#places').addClass('placesTest');
     });
     
   }
 }
+/*
+document.getElementById('getApi').addEventListener('click', function(){
+  
+  fetch('https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyAOCcH27nQCw7DGXAs_NpFTMSsiDgF1oTk', {
+    headers: {
+    Authentication: 'secret',
+    Access-Control-Allow-Origin: '*'
+  }
+  })
+    .then((res) => res.json())
+    .then((data) => {
+    document.getElementById('trending').innerHTML = data;
+    });
+})
+/*
 
-/* testing out jquery, to be used to add places info to the places section when a marker is clicked
+      
+  /*    
+      
+      
+ testing out jquery, to be used to add places info to the places section when a marker is clicked
 
  marker.addListener('click', function() {
    $('#places').addClass('placesTest');
@@ -106,10 +148,6 @@ var cityNames = ["Berlin", "London", "Amsterdam", "Dublin", "Manchester", "Paris
 
 */
 
-
-
-let newLocations;
-
 function getSearchValue() {
 
 let searchValue = document.getElementById("locationsGenerator").value;
@@ -121,3 +159,22 @@ console.log(newLocations);
 };
 
 
+/*  kayak ap to be embedded to book flights
+KAYAK.embed({
+container: document.getElementById('kayak'),
+hostname: "www.kayak.com",
+autoPosition: true,
+defaultProduct: "hotels",
+enabledProducts: ["hotels", "flights"],
+startDate: "2018-10-02",
+endDate: "2018-10-28",
+origin: "New York, NY",
+destination: "Boston, MA",
+ssl: true,
+affiliateId: "acme_corp",
+isInternalLoad: false,
+lc: "en",
+cc: "us",
+mc: "EUR"
+});
+*/
