@@ -54,8 +54,8 @@
         infoWindow = new google.maps.InfoWindow({
           content: document.getElementById('info-content')
         });
-
-        // keeping the selected country as the restriction for the city to search., 
+keeping the selected country as the restriction for the city to search., 
+        // 
         autocomplete = new google.maps.places.Autocomplete(
             /** @type {!HTMLInputElement} */ (
                 document.getElementById('autocomplete')), {
@@ -83,10 +83,34 @@
       }
 
 
+      var search = {
+          bounds: map.getBounds(),
+          types: ['tourist_attraction']
+        };
 
 
+       places.nearbySearch(search, function(results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            clearResults();
+            clearMarkers();
 
+            for (var i = 0; i < results.length; i++) {
+              var markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
+              var markerIcon = MARKER_PATH + markerLetter + '.png';
 
+              markers[i] = new google.maps.Marker({
+                position: results[i].geometry.location,
+                animation: google.maps.Animation.DROP,
+                icon: markerIcon
+              });
+
+              markers[i].placeResult = results[i];
+              google.maps.event.addListener(markers[i], 'click', showInfoWindow);
+              setTimeout(dropMarker(i), i * 100);
+              addResult(results[i], i);
+            }
+          }
+        });
 
 
 
