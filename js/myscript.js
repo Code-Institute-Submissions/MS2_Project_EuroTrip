@@ -1,8 +1,7 @@
-
  var map, places, infoWindow;
       var markers = [];
       var autocomplete;
-      var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+      var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
       var hostnameRegexp = new RegExp('^https?://.+?/');
 
       var countries = {
@@ -55,7 +54,7 @@
           content: document.getElementById('info-content')
         });
 
-        // keeping the selected country as the restriction for the city to search., 
+
         autocomplete = new google.maps.places.Autocomplete(
             /** @type {!HTMLInputElement} */ (
                 document.getElementById('autocomplete')), {
@@ -65,13 +64,13 @@
 
         autocomplete.addListener('place_changed', onPlaceChanged);
 
+
         document.getElementById('country').addEventListener(
             'change', setAutocompleteCountry);
       }
 
 
-  
-     function onPlaceChanged() {
+      function onPlaceChanged() {
         var place = autocomplete.getPlace();
         if (place.geometry) {
           map.panTo(place.geometry.location);
@@ -82,14 +81,13 @@
         }
       }
 
-    function search() {
-      var search = {
+      function search() {
+        var search = {
           bounds: map.getBounds(),
           types: ['tourist_attraction']
         };
 
-
-       places.nearbySearch(search, function(results, status) {
+        places.nearbySearch(search, function(results, status) {
           if (status === google.maps.places.PlacesServiceStatus.OK) {
             clearResults();
             clearMarkers();
@@ -111,7 +109,7 @@
             }
           }
         });
-    }
+      }
 
       function clearMarkers() {
         for (var i = 0; i < markers.length; i++) {
@@ -122,7 +120,7 @@
         markers = [];
       }
 
-        function setAutocompleteCountry() {
+      function setAutocompleteCountry() {
         var country = document.getElementById('country').value;
         if (country == 'all') {
           autocomplete.setComponentRestrictions({'country': []});
@@ -137,13 +135,12 @@
         clearMarkers();
       }
 
-
       function dropMarker(i) {
         return function() {
           markers[i].setMap(map);
         };
       }
-      
+
       function addResult(result, i) {
         var results = document.getElementById('results');
         var markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
@@ -169,12 +166,13 @@
         results.appendChild(tr);
       }
 
-    function clearResults() {
+      function clearResults() {
         var results = document.getElementById('results');
         while (results.childNodes[0]) {
           results.removeChild(results.childNodes[0]);
         }
       }
+
 
       function showInfoWindow() {
         var marker = this;
@@ -188,7 +186,7 @@
             });
       }
 
-function buildIWContent(place) {
+      function buildIWContent(place) {
         document.getElementById('iw-icon').innerHTML = '<img class="cityIcon" ' +
             'src="' + place.icon + '"/>';
         document.getElementById('iw-url').innerHTML = '<b><a href="' + place.url +
@@ -202,7 +200,6 @@ function buildIWContent(place) {
         } else {
           document.getElementById('iw-phone-row').style.display = 'none';
         }
-
 
         if (place.rating) {
           var ratingHtml = '';
@@ -232,7 +229,6 @@ function buildIWContent(place) {
           document.getElementById('iw-website-row').style.display = 'none';
         }
       }
-
 
 
 
