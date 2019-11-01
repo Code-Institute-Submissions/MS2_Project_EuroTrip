@@ -122,7 +122,20 @@
         markers = [];
       }
 
-
+          function setAutocompleteCountry() {
+        var country = document.getElementById('country').value;
+        if (country == 'all') {
+          autocomplete.setComponentRestrictions({'country': []});
+          map.setCenter({lat: 52.520008, lng: 13.404954});
+          map.setZoom(4);
+        } else {
+          autocomplete.setComponentRestrictions({'country': country});
+          map.setCenter(countries[country].center);
+          map.setZoom(countries[country].zoom);
+        }
+        clearResults();
+        clearMarkers();
+      }
 
 
 
