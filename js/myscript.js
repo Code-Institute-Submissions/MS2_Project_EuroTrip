@@ -169,7 +169,24 @@
         results.appendChild(tr);
       }
 
+    function clearResults() {
+        var results = document.getElementById('results');
+        while (results.childNodes[0]) {
+          results.removeChild(results.childNodes[0]);
+        }
+      }
 
+      function showInfoWindow() {
+        var marker = this;
+        places.getDetails({placeId: marker.placeResult.place_id},
+            function(place, status) {
+              if (status !== google.maps.places.PlacesServiceStatus.OK) {
+                return;
+              }
+              infoWindow.open(map, marker);
+              buildIWContent(place);
+            });
+      }
 
 
 
