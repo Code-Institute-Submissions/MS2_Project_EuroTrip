@@ -1,4 +1,97 @@
-function initMap() {
+
+ var map, places, infoWindow;
+      var markers = [];
+      var autocomplete;
+      var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+      var hostnameRegexp = new RegExp('^https?://.+?/');
+
+      var countries = {
+
+        'br': {
+          center: {lat: -14.2, lng: -51.9},
+          zoom: 3
+        },
+
+        'fr': {
+          center: {lat: 46.2, lng: 2.2},
+          zoom: 5
+        },
+        'de': {
+          center: {lat: 51.2, lng: 10.4},
+          zoom: 5
+        },
+
+        'it': {
+          center: {lat: 41.9, lng: 12.6},
+          zoom: 5
+        },
+
+        'es': {
+          center: {lat: 40.5, lng: -3.7},
+          zoom: 5
+        },
+        'pt': {
+          center: {lat: 39.4, lng: -8.2},
+          zoom: 6
+        },
+
+        'uk': {
+          center: {lat: 54.8, lng: -4.6},
+          zoom: 5
+        }
+      };
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: {lat: 52.520008, lng: 13.404954},
+          mapTypeControl: false,
+          panControl: false,
+          zoomControl: false,
+          streetViewControl: false
+        });
+
+        infoWindow = new google.maps.InfoWindow({
+          content: document.getElementById('info-content')
+        });
+
+        // Create the autocomplete object and associate it with the UI input control.
+        // Restrict the search to the default country, and to place type "cities".
+        autocomplete = new google.maps.places.Autocomplete(
+            /** @type {!HTMLInputElement} */ (
+                document.getElementById('autocomplete')), {
+              types: ['(cities)'],
+            });
+        places = new google.maps.places.PlacesService(map);
+
+        autocomplete.addListener('place_changed', onPlaceChanged);
+
+
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 4,
     center: {lat: 52.520008, lng: 13.404954}
@@ -108,45 +201,8 @@ document.getElementById('getApi').addEventListener('click', function(){
 */
 
 
-
-
-/*
- function initMap() {
-
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 5,
-          center: {lat: 49.815273, lng: 6.129583}
-        });
-
-          var request = {
-          placeId: 'place_id',
-          fields: ['name', 'formatted_address', 'place_id', 'geometry']
-        };
-
-
-        var infowindow = new google.maps.InfoWindow();
-        var service = new google.maps.places.PlacesService(map);
-
-          service.getDetails(request, function(place, status) {
-          if (status === google.maps.places.PlacesServiceStatus.OK) {
-            var marker = new google.maps.Marker({
-              map: map,
-              position: place.geometry.location
-            });
-            google.maps.event.addListener(marker, 'click', function() {
-              infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
-                'Place ID: ' + place.place_id + '<br>' +
-                place.formatted_address + '</div>');
-              infowindow.open(map, this);
-            });
-          }
-        });
-
-
 // Create an array of the cities used to label the markers.
 var cityNames = ["Berlin", "London", "Amsterdam", "Dublin", "Manchester", "Paris", "Barcelona", "Madrid", "Oslo", "Belfast"];
-
-*/
 
 function getSearchValue() {
 
