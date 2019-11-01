@@ -47,16 +47,8 @@
         width: 100%;  /* The width is the width of the web page */
        }
 
-.placesTest {
-    height: 40em;
-    width: 40em;
-    background: url("https://wordpress-network.prod.aws.skyscnr.com/wp-content/uploads/2018/05/new-york-city-187703420.jpg");
-}
 
-table {
-        font-size: 12px;
-      }
-      .hotel-search {
+      .city-search {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
@@ -70,23 +62,16 @@ table {
         width: 440px;
         z-index: 1;
       }
-      #map {
-        margin-top: 40px;
-        width: 440px;
-      }
+
       #listing {
-        position: absolute;
+
         width: 200px;
         height: 470px;
         overflow: auto;
-        left: 442px;
-        top: 0px;
         cursor: pointer;
         overflow-x: hidden;
       }
-      #findhotels {
-        font-size: 14px;
-      }
+
       #locationField {
         -webkit-box-flex: 1 1 190px;
         -ms-flex: 1 1 190px;
