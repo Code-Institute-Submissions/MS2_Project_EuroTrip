@@ -55,8 +55,7 @@
           content: document.getElementById('info-content')
         });
 
-        // Create the autocomplete object and associate it with the UI input control.
-        // Restrict the search to the default country, and to place type "cities".
+        // keeping the selected country as the restriction for the city to search., 
         autocomplete = new google.maps.places.Autocomplete(
             /** @type {!HTMLInputElement} */ (
                 document.getElementById('autocomplete')), {
@@ -66,10 +65,22 @@
 
         autocomplete.addListener('place_changed', onPlaceChanged);
 
-
+        document.getElementById('country').addEventListener(
+            'change', setAutocompleteCountry);
       }
 
 
+  
+     function onPlaceChanged() {
+        var place = autocomplete.getPlace();
+        if (place.geometry) {
+          map.panTo(place.geometry.location);
+          map.setZoom(12);
+          search();
+        } else {
+          document.getElementById('autocomplete').placeholder = 'Enter a city';
+        }
+      }
 
 
 
