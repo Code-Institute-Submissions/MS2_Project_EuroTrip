@@ -54,8 +54,8 @@
         infoWindow = new google.maps.InfoWindow({
           content: document.getElementById('info-content')
         });
-keeping the selected country as the restriction for the city to search., 
-        // 
+
+        // keeping the selected country as the restriction for the city to search., 
         autocomplete = new google.maps.places.Autocomplete(
             /** @type {!HTMLInputElement} */ (
                 document.getElementById('autocomplete')), {
@@ -82,7 +82,7 @@ keeping the selected country as the restriction for the city to search.,
         }
       }
 
-
+    function search() {
       var search = {
           bounds: map.getBounds(),
           types: ['tourist_attraction']
@@ -111,8 +111,16 @@ keeping the selected country as the restriction for the city to search.,
             }
           }
         });
+    }
 
-
+      function clearMarkers() {
+        for (var i = 0; i < markers.length; i++) {
+          if (markers[i]) {
+            markers[i].setMap(null);
+          }
+        }
+        markers = [];
+      }
 
 
 
