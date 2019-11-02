@@ -82,10 +82,11 @@
 
 <section class="mx-auto container no-gutters bg-light mt-5">
     <div class="row">
-<div class="col-12">
+        <div class="col-12">
+           <div class="col-12">
            <div class="city-search">
               <div id="findcities">
-                Find stuff in:
+                Find things in:
               </div>
         
               <div id="locationField">
@@ -140,8 +141,49 @@
               </div>
             </div>
         </div>
+        </div>
     </div>
+        <div class="row">
+        <div class="col-12">
+           <div class="col-12">
 
+            <div id="map"></div>
+        
+            <div id="listing">
+              <table id="resultsTable">
+                <tbody id="results"></tbody>
+              </table>
+            </div>
+        
+            <div style="display: none">
+              <div id="info-content">
+                <table>
+                  <tr id="iw-url-row" class="iw_table_row">
+                    <td id="iw-icon" class="iw_table_icon"></td>
+                    <td id="iw-url"></td>
+                  </tr>
+                  <tr id="iw-address-row" class="iw_table_row">
+                    <td class="iw_attribute_name">Address:</td>
+                    <td id="iw-address"></td>
+                  </tr>
+                  <tr id="iw-phone-row" class="iw_table_row">
+                    <td class="iw_attribute_name">Telephone:</td>
+                    <td id="iw-phone"></td>
+                  </tr>
+                  <tr id="iw-rating-row" class="iw_table_row">
+                    <td class="iw_attribute_name">Rating:</td>
+                    <td id="iw-rating"></td>
+                  </tr>
+                  <tr id="iw-website-row" class="iw_table_row">
+                    <td class="iw_attribute_name">Website:</td>
+                    <td id="iw-website"></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+        </div>
+        </div>
+    </div>
 </section>
 
 <section class="mx-auto container no-gutters bg-secondary mt-5">
@@ -174,9 +216,9 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOCcH27nQCw7DGXAs_NpFTMSsiDgF1oTk&libraries=places&callback=initMap"></script>
 <script src="js/myscript.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOCcH27nQCw7DGXAs_NpFTMSsiDgF1oTk&libraries=places&callback=initMap"></script>
+<script type="text/javaScript" src="https://www.kayak.com/affiliate/widget-v2.js"></script>
 
     
 </body>
