@@ -362,7 +362,7 @@ KAYAK.embed({
 container: document.getElementById('kayakSearchWidgetContainer'),
 hostname: "www.kayak.com",
 autoPosition: true,
-defaultProduct: "hotels",
+defaultProduct: "flights",
 enabledProducts: ["hotels", "flights"],
 startDate: "2018-10-02",
 endDate: "2018-10-28",
