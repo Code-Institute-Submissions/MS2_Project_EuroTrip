@@ -52,42 +52,33 @@
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        background: #fff;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 440px;
         z-index: 1;
+        width: 600px;
+      }
+      
+      #locationField {
+        width: 100%;
+      }
+      
+      #findCities {
+        text-align: right;
+      }
+
+      #controls {
+        width: 100%;
       }
 
       #listing {
         width: 200px;
-        height: 470px;
+        height: 600px;
         overflow: auto;
         cursor: pointer;
         overflow-x: hidden;
       }
 
-      #locationField {
-        -webkit-box-flex: 1 1 190px;
-        -ms-flex: 1 1 190px;
-        flex: 1 1 190px;
-        margin: 0 8px;
-      }
-      #controls {
-        -webkit-box-flex: 1 1 140px;
-        -ms-flex: 1 1 140px;
-        flex: 1 1 140px;
-      }
-      #autocomplete {
-        width: 100%;
-      }
-      #country {
-        width: 100%;
-      }
       .placeIcon {
         width: 20px;
         height: 34px;
