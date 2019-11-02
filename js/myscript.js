@@ -356,9 +356,10 @@ console.log(newLocations);
 };
 
 
-/*  kayak ap to be embedded to book flights
+/*  kayak ap to be embedded to book flights */
+
 KAYAK.embed({
-container: document.getElementById('kayak'),
+container: document.getElementById('kayakSearchWidgetContainer'),
 hostname: "www.kayak.com",
 autoPosition: true,
 defaultProduct: "hotels",
@@ -374,4 +375,3 @@ lc: "en",
 cc: "us",
 mc: "EUR"
 });
-*/

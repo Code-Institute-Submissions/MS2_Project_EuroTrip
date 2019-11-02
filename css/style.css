@@ -43,7 +43,7 @@
 /*   Google maps section      */
 
 #map {
-        height: 400px;  /* The height is 400 pixels */
+        height: 600px;  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
        }
 
@@ -64,7 +64,6 @@
       }
 
       #listing {
-
         width: 200px;
         height: 470px;
         overflow: auto;
