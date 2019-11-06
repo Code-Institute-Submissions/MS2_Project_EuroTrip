@@ -7,7 +7,7 @@
 
 .searchContainer {
     height: 80vh;
-    width: 100vw;
+    width: 100%;
     margin-top: 20em;
     background: url("https://wordpress-network.prod.aws.skyscnr.com/wp-content/uploads/2018/05/new-york-city-187703420.jpg");
     background-size: cover;
@@ -177,14 +177,26 @@
 
 }
 
-.carousel-item img:hover {
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    -ms-transform: scale(1.2);
+.carousel-item img {
+  transform-origin: 50% 65%;
+  transition: transform 2s, filter 1s ease-in-out;
+  filter: brightness(150%);
+}
+
+.carousel-item:hover img {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     -webkit-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
     -moz-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
     -o-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
     -ms-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
     box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+#trending {
+    height: 550px;
+    width: 80%;
 }
