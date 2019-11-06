@@ -375,3 +375,26 @@ lc: "en",
 cc: "us",
 mc: "EUR"
 });
+
+/*   Carousel section      */ 
+
+
+$('#carouselExample').on('slide.bs.carousel', function (e) {
+
+    let $e = $(e.relatedTarget);
+    let index = $e.index();
+    let numOfCards = 3;
+    let totalCards = $('.carousel-item').length;
+    
+    if (index >= totalCards-(numOfCards-1)) {
+        let cardsTurn = numOfCards - (totalCards - index);
+        for (let i=0; i<cardsTurn; i++) {
+            if (e.direction=="left") {
+                $('.carousel-item').eq(i).appendTo('.carousel-inner');
+            }
+            else {
+                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+            }
+        }
+    }
+});
