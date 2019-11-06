@@ -20,7 +20,7 @@
 <nav class="navbar navbar-light bg-transparent fixed-top">
 
     
-    <div class="navbar-header ml-auto mr-1">
+    <div class="navbar-header ml-auto mr-3">
         <button class="navbar-toggler mt-2 d-block navbar-but" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
           <div class="navbar-toggler-icon"></div>
         </button>
@@ -29,7 +29,7 @@
 
     <div class="collapse ml-auto" id="navbarToggleExternalContent">
         <div class="bg-transparent pr-4 nav-list fixed-top mt-5">
-            <ul class="nav-list mt-3">
+            <ul class="nav-list mt-3 mr-3">
                  <li class="nav-list-items pt-1"><a href="#mainHead">Search</a></li>
                  <li class="nav-list-items pt-1"><a href="#map">Map</a></li>
                  <li class="nav-list-items pt-1"><a href="#trending">Trending</a></li>
@@ -37,7 +37,12 @@
         </div>
     </div>
 
-  <section class="mx-auto container-fluid pl-0 pr-0 mt-3 my-auto searchContainer">
+
+
+
+</header>
+
+<section class="mx-auto container-fluid pl-0 pr-0 mt-3 my-auto searchContainer">
 
     <div class="row mx-auto">
         <div class="col-10 mx-auto">
@@ -46,38 +51,46 @@
         </div>
     </div>
     
-    <div class="row mt-3">
-        <div class="col-8 mx-auto">
-            <div class="row">
-                    
-                    <div class="col-6 ml-auto mr-1 pr-0">
-                        <input id="locationsGenerator" class="form-control searchbox" type="number" placeholder="Budget?" aria-label="Search">
-                    </div>      
-                    <div class="col-4 mr-auto pl-0">
-                        
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Out</button>
-                            
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            </div>
-                              
-                        <button type="button" class="btn btn-outline-success mx-auto dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">In</button>
-                          
-                        <button id="submitButton" onclick="getSearchValue()" class="btn btn-outline-success mx-auto" type="submit">Search</button>
-                        
-                    </div>
-                    
-            </div>
+    <div class="row mt-3 d-flex justify-content-center">
+        <div class="col-6 mr-1 pr-0">
+            <input id="locationsGenerator" class="searchbox form-control mr-0 ml-auto pr-0" type="number" placeholder="Budget?" aria-label="Search">
+        </div>
+
+        <div class="col-1 ml-1 p-0">
+            <button id="submitButton" onclick="getSearchValue()" class="btn btn-outline-success mx-auto" type="submit">Search Cities</button>
         </div>
     </div>
     
 </section>
 
-
-</header>
-
-
-
+<section id="reasonsBanner" class="container mx-auto mt-5">
+    <div class="row mx-auto">
+        <div class="col-12 col-sm-4">
+            <i class="fas fa-euro-sign fa-2x mb-2"></i>
+            <h3>Cheap</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+            sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+            magna aliquam erat volutpat. Ut wisi enim ad minim veniam</p>
+            </div>
+        <div class="col-12 col-sm-4">
+            <i class="fab fa-google fa-2x mb-2"></i>
+            <h4>Maps</h4>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+            sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+            magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+            quis nostrud exerci tation ullamcorper suscipit lobortis nisl</p>
+        </div>
+        <div class="col-12 col-sm-4">
+            <i class="far fa-clock fa-2x mb-2"></i>
+            <h3>Quick</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+            sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+            magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+            quis nostrud exerci tation ullamcorper suscipit lobortis nisl</p>
+            </div>
+    </div>
+    
+</section>
 
 <section class="mx-auto container no-gutters bg-light mt-5">
     <div class="row mx-auto city-search  mb-2">
@@ -106,7 +119,7 @@
         
                 <div id="map" class="col-8 ml-5"></div>
         
-                <div id="listing" class="col-3 mx-auto" mr-1>
+                <div id="listing" class="col-3 mx-auto">
                     <table id="resultsTable">
                         <tbody id="results"></tbody>
                     </table>
@@ -142,13 +155,12 @@
         </div>
 </section>
 
-
 <section id="trending" class=" mx-auto container-fluid no-gutters mt-5 bg-transparent">
 
     <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
         <div class="carousel-inner row w-10 mx-auto" role="listbox">
             <div class="carousel-item col-md-4 active">
-                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400/000/fff?text=1" alt="Berlin">
+                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x500/000/fff?text=1" alt="Berlin">
                 <h3 class="trending-pic-title mt-3">Berlin</h3>
                 <p class="trending-pic-para pr-1">
                     Berlin is a very alternative, cultural city with many walks & tours to explore its history. It also has a very vibrant nightlife.
@@ -158,7 +170,7 @@
                 </p>
             </div>
             <div class="carousel-item col-md-4">
-                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400/000/fff?text=2" alt="2">
+                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x500/000/fff?text=2" alt="2">
                 <h3 class="trending-pic-title mt-3">Berlin</h3>
                 <p class="trending-pic-para pr-1">
                     Berlin is a very alternative, cultural city with many walks & tours to explore its history. It also has a very vibrant nightlife.
@@ -168,7 +180,7 @@
                 </p>
             </div>
             <div class="carousel-item col-md-4">
-                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400/000/fff?text=3" alt="3">
+                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x500/000/fff?text=3" alt="3">
                 <h3 class="trending-pic-title mt-3">Berlin</h3>
                 <p class="trending-pic-para pr-1">
                     Berlin is a very alternative, cultural city with many walks & tours to explore its history. It also has a very vibrant nightlife.
@@ -178,7 +190,7 @@
                 </p>
             </div>
             <div class="carousel-item col-md-4">
-                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400/000/fff?text=4" alt="4">
+                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x500/000/fff?text=4" alt="4">
                 <h3 class="trending-pic-title mt-3">Berlin</h3>
                 <p class="trending-pic-para pr-1">
                     Berlin is a very alternative, cultural city with many walks & tours to explore its history. It also has a very vibrant nightlife.
@@ -188,7 +200,7 @@
                 </p>
             </div>
             <div class="carousel-item col-md-4">
-                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400/000/fff?text=5" alt="5">
+                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x500/000/fff?text=5" alt="5">
                 <h3 class="trending-pic-title mt-3">Berlin</h3>
                 <p class="trending-pic-para pr-1">
                     Berlin is a very alternative, cultural city with many walks & tours to explore its history. It also has a very vibrant nightlife.
@@ -198,7 +210,7 @@
                 </p>
             </div>
             <div class="carousel-item col-md-4">
-                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x400/000/fff?text=6" alt="6">
+                <img class="img-fluid mx-auto d-block" src="//placehold.it/600x500/000/fff?text=6" alt="6">
                 <h3 class="trending-pic-title mt-3">Berlin</h3>
                 <p class="trending-pic-para pr-2">
                     Berlin is a very alternative, cultural city with many walks & tours to explore its history. It also has a very vibrant nightlife.
