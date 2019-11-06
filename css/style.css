@@ -1,25 +1,25 @@
 /*   navbar      */
 
-#main-head {
-    height: 9vh;
-    width: 100vw;
-}
-
-.searchContainer {
-    height: 80vh;
-    width: 100%;
-    margin-top: 20em;
-    background: url("https://wordpress-network.prod.aws.skyscnr.com/wp-content/uploads/2018/05/new-york-city-187703420.jpg");
-    background-size: cover;
+.navbar-toggler-icon {
+    z-index: 100;
 }
 
 .nav-list{
     text-align: right;
     list-style-type: none;
     font-size: 25px;
+    z-index: 100;
 }
 
-/*   search bar      */
+/*   search bar  ----------------------------------------    */
+
+.searchContainer {
+    height: 70vh;
+    width: 100%;
+    margin-top: 20em;
+    background: url("https://wordpress-network.prod.aws.skyscnr.com/wp-content/uploads/2018/05/new-york-city-187703420.jpg");
+    background-size: cover;
+}
 
 .search-bar-header {
     text-align: center;
@@ -27,7 +27,7 @@
 }
 
 .searchbox {
-    width: 100%;
+  width: 90%;
 }
 
 .search-bar-sub-header {
@@ -40,11 +40,11 @@
 }
 
 
-/*   Google maps section      */
+/*   Google maps section   --------------------------------   */
 
 #map {
-        height: 600px;  /* The height is 400 pixels */
-        width: 100%;  /* The width is the width of the web page */
+        height: 600px;  
+        width: 100%;  
        }
 
 
@@ -91,6 +91,7 @@
       #resultsTable {
         border-collapse: collapse;
         width: 240px;
+        opacity: 0.4;
       }
       #rating {
         font-size: 13px;
@@ -106,6 +107,12 @@
       .iw_table_icon {
         text-align: right;
       }
+
+@media (max-width: 767px) {
+  #listing {
+    display: none;
+  }
+}
 
 /*   Carousel section      */      
       

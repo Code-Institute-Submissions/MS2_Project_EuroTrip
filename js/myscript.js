@@ -356,7 +356,7 @@ console.log(newLocations);
 };
 
 
-/*  kayak ap to be embedded to book flights */
+/*  kayak ap to be embedded to book flights ------------------*/
 
 KAYAK.embed({
 container: document.getElementById('kayakSearchWidgetContainer'),
@@ -376,7 +376,9 @@ cc: "us",
 mc: "EUR"
 });
 
-/*   Carousel section      */ 
+
+
+/*   Carousel section -----------------------------------     */ 
 
 
 $('#carouselExample').on('slide.bs.carousel', function (e) {
