@@ -307,15 +307,15 @@ document.getElementById('getApi').addEventListener('click', function(){
    $('#places').addClass('placesTest');
 */
 var locationz = [
-        {lat: 52.520008, lng: 13.404954, cost: 130, name: 'Berlin'}, //berlin
-        {lat: 51.507351, lng: -0.127758, cost: 90, name: 'London'}, // london
-        {lat: 52.370216, lng: 4.895168, cost: 130, name: 'Amsterdam'}, //amsterdam
-        {lat: 53.349804, lng: -6.260310, cost: 50, name: 'Dublin'}, //dublin
-        {lat: 53.480759, lng: -2.242631, cost: 40, name: 'Manchester'}, //manchester
-        {lat: 48.856613, lng: 2.352222, cost: 240, name: 'Paris'}, //paris
-        {lat: 41.385063, lng: 2.173404, cost: 130, name: 'Barcelona'}, //barcelona
-        {lat: 40.416775, lng: -3.703790, cost: 180, name: 'Madrid'}, //madrid
-        {lat: 59.913868, lng: 10.752245, cost: 230, name: 'Oslo'}, //oslo
+        {lat: 52.520008, lng: 13.404954, cost: 130, name: 'Berlin'},
+        {lat: 51.507351, lng: -0.127758, cost: 90, name: 'London'},
+        {lat: 52.370216, lng: 4.895168, cost: 130, name: 'Amsterdam'},
+        {lat: 53.349804, lng: -6.260310, cost: 50, name: 'Dublin'},
+        {lat: 53.480759, lng: -2.242631, cost: 40, name: 'Manchester'},
+        {lat: 48.856613, lng: 2.352222, cost: 240, name: 'Paris'},
+        {lat: 41.385063, lng: 2.173404, cost: 130, name: 'Barcelona'},
+        {lat: 40.416775, lng: -3.703790, cost: 180, name: 'Madrid'}, 
+        {lat: 59.913868, lng: 10.752245, cost: 230, name: 'Oslo'}, 
         {lat: 54.597286, lng: -5.930120, cost: 50, name: 'Belfast'},
         {lat: 41.157944, lng: -8.629105, cost: 120, name: 'Porto'},
         {lat: 28.291565, lng: -16.629129, cost: 220, name: 'Tenerife'},
