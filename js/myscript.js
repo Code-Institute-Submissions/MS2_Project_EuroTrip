@@ -346,7 +346,7 @@ var locationz = [
 function getSearchValue() {
 
 let searchValue = document.getElementById("locationsGenerator").value;
-var el = document.getElementById("myselect");
+var el = document.getElementById("cityInBudget");
 el.innerHTML = "";
 
 let newLocations = locationz.filter(function(place) {
@@ -354,8 +354,8 @@ let newLocations = locationz.filter(function(place) {
 });
 
 newLocations.map(function(obj) {
-//  $('#myselect').append($('<option>').text(obj.name).attr('value', obj.name));  
-el.innerHTML += "<p>" + obj.name + "</p>";
+//  $('#cityInBudget').append($('<option>').text(obj.name).attr('value', obj.name));  
+el.innerHTML += `<p>  ${obj.name}  </p>`;
   console.log(obj.name);
 });
 
