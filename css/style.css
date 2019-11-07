@@ -65,7 +65,26 @@
 
 #cityInBudget {
   overflow-y: scroll;
+  scrollbar-width: 2px;
+  -ms-overflow-style: none;
   height: 200px;
+  width: 300px;
+}
+#cityInBudget::-webkit-scrollbar {
+    width: 2px;
+    height: 0;
+}
+.filtered-city-name {
+  font-size: 30px;
+  color: #fff;
+}
+
+.filtered-city-button {
+  width: 6em;
+}
+
+.explore-button {
+  margin-right: 4em;
 }
 
 
@@ -119,7 +138,7 @@
       #resultsTable {
         border-collapse: collapse;
         width: 240px;
-        opacity: 0.4;
+        opacity: 0.9;
       }
       #rating {
         font-size: 13px;
