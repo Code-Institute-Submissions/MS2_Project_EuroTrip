@@ -1,4 +1,4 @@
-/*   navbar      */
+/*   navbar    ----------------------------------------  */
 
 .navbar-toggler-icon {
     z-index: 100;
@@ -224,4 +224,31 @@
 #trending {
     height: 550px;
     width: 80%;
+}
+
+/*--footer--*/
+
+
+.footer-main-section {
+    width: 100%;
+    background-color: #F0EBE9;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    display: block;
+}
+
+.footer-icons a {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    color: #664E4C;
+}
+
+.footer-icons a:hover {
+    color: #FFD4CA;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
 }
