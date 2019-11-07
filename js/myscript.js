@@ -337,12 +337,12 @@ el.innerHTML +=
 `
 <div class="container pt-4">
 <div class="row pb-3">
-<div class="col-3 mx-auto filtered-city-name">${obj.name}  
+<div class="col-2 col-md-3 mx-auto filtered-city-name">${obj.name}  
 </div>
-<div class="col-2 ">
+<div class="col-3 col-md-2 mx-auto">
 <a class="btn btn-primary filtered-city-button" href="#kayakSearchWidgetContainer" role="button"> Book </a>
 </div>
-<div class="col-2 explore-button">
+<div class="col-3 col-md-2 explore-button mx-auto">
 <a class="btn btn-primary filtered-city-button" href="#searchMap" role="button">Explore</a>
 </div>
 </div>
@@ -422,3 +422,4 @@ $('#exampleModal').on('shown.bs.modal', function() {
 }
 
 */
+
