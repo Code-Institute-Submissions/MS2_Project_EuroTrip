@@ -342,8 +342,6 @@ var locationz = [
         {lat: 45.440845, lng: 12.315515, cost: 340, name: 'Venice'}
       ];
 
-// Create an array of the cities used to label the markers.
-var cityNames = ["Berlin", "London", "Amsterdam", "Dublin", "Manchester", "Paris", "Barcelona", "Madrid", "Oslo", "Belfast"];
 
 function getSearchValue() {
 
@@ -400,3 +398,25 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
         }
     }
 });
+
+
+
+// Email link to be added to keep up to date etc.
+/*function sendMail(contactForm) {
+    emailjs.send("rosie", "template_ZKtZzmKA", {                        //service_id, template, 3rd argu is the object that contains the parameters
+        "from_name": contactForm.name.value,
+        "from_email": contactForm.emailaddress.value,
+        "project_request": contactForm.projectsummary.value
+    })
+    .then(
+        function(response) {
+            console.log("SUCCESS", response);
+        },
+        function(error) {
+            console.log("FAILED", error);
+        }
+    );
+    return false;  // To block from loading a new page
+}
+
+*/
