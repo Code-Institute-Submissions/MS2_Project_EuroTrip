@@ -281,30 +281,7 @@ function setMarkers(map) {
     
   }
 }
-/*
-document.getElementById('getApi').addEventListener('click', function(){
-  
-  fetch('https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyAOCcH27nQCw7DGXAs_NpFTMSsiDgF1oTk', {
-    headers: {
-    Authentication: 'secret',
-    Access-Control-Allow-Origin: '*'
-  }
-  })
-    .then((res) => res.json())
-    .then((data) => {
-    document.getElementById('trending').innerHTML = data;
-    });
-})
-/*
 
-      
-  /*    
-      
-      
- testing out jquery, to be used to add places info to the places section when a marker is clicked
-
- marker.addListener('click', function() {
-   $('#places').addClass('placesTest');
 */
 var locationz = [
         {lat: 52.520008, lng: 13.404954, cost: 130, name: 'Berlin'},
@@ -355,7 +332,22 @@ let newLocations = locationz.filter(function(place) {
 
 newLocations.map(function(obj) {
 //  $('#cityInBudget').append($('<option>').text(obj.name).attr('value', obj.name));  
-el.innerHTML += `<p>  ${obj.name}  </p>`;
+el.innerHTML += 
+
+`
+<div class="container pt-4">
+<div class="row pb-3">
+<div class="col-3 mx-auto filtered-city-name">${obj.name}  
+</div>
+<div class="col-2 ">
+<a class="btn btn-primary filtered-city-button" href="#kayakSearchWidgetContainer" role="button"> Book </a>
+</div>
+<div class="col-2 explore-button">
+<a class="btn btn-primary filtered-city-button" href="#searchMap" role="button">Explore</a>
+</div>
+</div>
+</div>
+`;
   console.log(obj.name);
 });
 
@@ -406,7 +398,7 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
         }
     }
 });
-
+//attemptin to get modal to laod kayak widget properly
 $('#exampleModal').on('shown.bs.modal', function() {
     $("#kayakSearchWidgetContainer").attr("https://www.kayak.com/affiliate/widget-v2.js",window.URL.createObjectURL(Stream));
 });
