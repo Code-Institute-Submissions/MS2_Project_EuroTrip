@@ -30,8 +30,9 @@
         <div class="bg-transparent pr-4 nav-list fixed-top mt-5">
             <ul class="nav-list mt-3 mr-3">
                  <li class="nav-list-items pt-1"><a href="#mainHead">Search</a></li>
-                 <li class="nav-list-items pt-1"><a href="#map">Map</a></li>
+                 <li class="nav-list-items pt-1"><a href="#searchMap">Map</a></li>
                  <li class="nav-list-items pt-1"><a href="#trending">Trending</a></li>
+                 <li class="nav-list-items pt-1"><a href="#kayakSearchWidgetContainer">Book Now</a></li>
             </ul>
         </div>
     </div>
@@ -52,7 +53,7 @@
     
     <div class="row mt-3 d-flex justify-content-center">
         <div class="col-6 mr-1 pr-0">
-            <input id="locationsGenerator" class="searchbox form-control mr-0 ml-auto pr-0" type="number" placeholder="Budget?" aria-label="Search">
+            <input id="locationsGenerator" class="searchbox form-control mr-0 ml-auto pr-0" type="number" placeholder="Enter your budget €" aria-label="Search">
         </div>
 
         <div class="col-1 ml-1 p-0">
@@ -61,7 +62,7 @@
     </div>
     
     <div class="row">
-        <div id="cityInBudget" class="col-5 mx-auto">
+        <div id="cityInBudget" class="col-7 col-lg-5 mx-auto">
             <!-- Write your comments here 
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
               Launch demo modal
@@ -100,7 +101,7 @@
     
 </section>
 
-<section id="searchMap" class="mx-auto container no-gutters bg-light mt-5">
+<section id="searchMap" class="mx-auto container no-gutters bg-light mt-5 d-none d-md-block">
     <div class="row mx-auto city-search  mb-2">
             <div id="findCities" class="col-3 mt-2">
                 Things to do in:
@@ -123,17 +124,13 @@
             </div>
     </div>
     
-        <div class="row ">
+    
+        <div class="row">
         
-                <div id="map" class="col-8 ml-5"></div>
-        
-                <div id="listing" class="col-3 mx-auto">
-                    <table id="resultsTable">
-                        <tbody id="results"></tbody>
-                    </table>
-                </div>
-        
-                <div style="display: none">
+                <div id="map" class="col-6 col-sm-8 ml-5">
+                    <div class="row">
+                        <div class="col">
+                            <div style="display: none">
                     <div id="info-content">
                         <table>
                             <tr id="iw-url-row" class="iw_table_row">
@@ -159,6 +156,17 @@
                         </table>
                     </div>
                 </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div id="listing" class="col-3 mx-auto">
+                    <table id="resultsTable">
+                        <tbody id="results"></tbody>
+                    </table>
+                </div>
+        
+                
         
         </div>
 </section>
