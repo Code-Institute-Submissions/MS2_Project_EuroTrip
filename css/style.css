@@ -26,7 +26,7 @@
 
 .search-bar-header {
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
     color: #fff;
 }
 
@@ -55,24 +55,25 @@
 
 .search-bar-sub-header {
     text-align: center;
-    font-size: 10px;
+    font-size: 20px;
     color: #fff;
 }
 
 .search-margin {
-    margin-top: 10em;
+    margin-top: 5em;
 }
 
 #cityInBudget {
   overflow-y: scroll;
-  scrollbar-width: 2px;
+  scrollbar-width: 5px;
   -ms-overflow-style: none;
   height: 200px;
   width: 300px;
 }
+
 #cityInBudget::-webkit-scrollbar {
-    width: 2px;
-    height: 0;
+    width: 5px;
+    height: 6px;
 }
 .filtered-city-name {
   font-size: 30px;
@@ -83,9 +84,7 @@
   width: 6em;
 }
 
-.explore-button {
-  margin-right: 4em;
-}
+
 
 
 /*   Google maps section   --------------------------------   */
@@ -103,7 +102,7 @@
         display: -ms-flexbox;
         display: flex;
         z-index: 1;
-        width: 600px;
+        width: 100%;
       }
       
       #locationField {
@@ -117,6 +116,7 @@
       #controls {
         width: 100%;
       }
+      
 
       #listing {
         width: 200px;
@@ -158,6 +158,12 @@
 @media (max-width: 767px) {
   #listing {
     display: none;
+  }
+  #controls {
+    display: none;
+  }
+  .searchContainer {
+    height: 80vh;
   }
 }
 
@@ -298,3 +304,7 @@
   margin-right: auto;
 }
 
+html {
+  scroll-behavior: smooth;
+  
+}
