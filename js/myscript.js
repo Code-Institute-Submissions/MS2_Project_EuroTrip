@@ -346,11 +346,19 @@ var locationz = [
 function getSearchValue() {
 
 let searchValue = document.getElementById("locationsGenerator").value;
+var el = document.getElementById("myselect");
+el.innerHTML = "";
 
 let newLocations = locationz.filter(function(place) {
   return place.cost <= searchValue;
 });
-console.log(newLocations);
+
+newLocations.map(function(obj) {
+//  $('#myselect').append($('<option>').text(obj.name).attr('value', obj.name));  
+el.innerHTML += "<p>" + obj.name + "</p>";
+  console.log(obj.name);
+});
+
 };
 
 
@@ -399,7 +407,9 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
     }
 });
 
-
+$('#exampleModal').on('shown.bs.modal', function() {
+    $("#kayakSearchWidgetContainer").attr("https://www.kayak.com/affiliate/widget-v2.js",window.URL.createObjectURL(Stream));
+});
 
 // Email link to be added to keep up to date etc.
 /*function sendMail(contactForm) {
