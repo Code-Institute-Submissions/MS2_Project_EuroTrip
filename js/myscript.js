@@ -8,35 +8,35 @@
 
         'br': {
           center: {lat: -14.2, lng: -51.9},
-          zoom: 3
+          zoom: 4
         },
 
         'fr': {
           center: {lat: 46.2, lng: 2.2},
-          zoom: 5
+          zoom: 6
         },
         'de': {
           center: {lat: 51.2, lng: 10.4},
-          zoom: 5
+          zoom: 6
         },
 
         'it': {
           center: {lat: 41.9, lng: 12.6},
-          zoom: 5
+          zoom: 6
         },
 
         'es': {
           center: {lat: 40.5, lng: -3.7},
-          zoom: 5
+          zoom: 6
         },
         'pt': {
           center: {lat: 39.4, lng: -8.2},
-          zoom: 6
+          zoom: 7
         },
 
         'uk': {
           center: {lat: 54.8, lng: -4.6},
-          zoom: 5
+          zoom: 6
         }
       };
 
@@ -264,7 +264,6 @@ var locationz = [
         {lat: 45.440845, lng: 12.315515, cost: 330, name: 'Venice'},
         {lat: 45.464203, lng: 9.189982, cost: 360, name: 'Milan'},
         {lat: 42.650661, lng: 18.094423, cost: 230, name: 'Dubrovnik'},
-        {lat: 45.440845, lng: 12.315515, cost: 340, name: 'Venice'}
       ];
 
 
@@ -357,10 +356,8 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
         }
     }
 });
-//attemptin to get modal to laod kayak widget properly
-$('#exampleModal').on('shown.bs.modal', function() {
-    $("#kayakSearchWidgetContainer").attr("https://www.kayak.com/affiliate/widget-v2.js",window.URL.createObjectURL(Stream));
-});
+
+
 
 // Email link to be added to keep up to date etc.
 /*function sendMail(contactForm) {
