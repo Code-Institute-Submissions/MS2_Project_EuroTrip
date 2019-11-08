@@ -231,58 +231,6 @@
       }
 
 
-
-/*function initMap() {
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: {lat: 52.520008, lng: 13.404954}
-  });
-
-  setMarkers(map);
-
-
-}
-
-let newLocations;
-
-var locations = [
-        ['130', 52.520008, 13.404954, 130, 'berlin'], //berlin
-        ['90', 51.507351, -0.127758, 90, 'london'], // london
-        ['130', 52.370216, 4.895168, 130, 'amsterdam'], //amsterdam
-        ['50', 53.349804, -6.260310, 50, 'dublin'], //dublin
-        ['40', 53.480759, -2.242631, 40, 'manchester'], //manchester
-        ['240', 48.856613, 2.352222, 240, 'paris'], //paris
-        ['130', 41.385063, 2.173404, 130, 'barcelona'], //barcelona
-        ['180', 40.416775, -3.703790, 180, 'madrid'], //madrid
-        ['230', 59.913868, 10.752245, 230, 'oslo'], //oslo
-        ['50', 54.597286, -5.930120, 50, "belfast"], //belfast
-      ];
-
-
-
-function setMarkers(map) {
-  // Adds markers to the map.
-
-  for (var i = 0; i < locationz.length; i++) {
-    var location = locationz[i];
-    var marker = new google.maps.Marker({
-     // position: {lat: location[1], lng: location[2]},
-      position: {lat: location.lat, lng: location.lng},
-      map: map,
-      title: `${location.name} : €${location.cost}`
-      //label: location[3]  - might try add lable to icons
-      //icon: 'might add a new marke in here'
-    });
-    
-    google.maps.event.addListener(marker,'click', function() {
-    $('#places').text("${location.name}");
-    $('#places').addClass('placesTest');
-    });
-    
-  }
-}
-
-*/
 var locationz = [
         {lat: 52.520008, lng: 13.404954, cost: 130, name: 'Berlin'},
         {lat: 51.507351, lng: -0.127758, cost: 90, name: 'London'},
@@ -337,23 +285,23 @@ el.innerHTML +=
 `
 <div class="container d-none d-sm-block pt-4">
 <div class="row pb-3">
-<div class="col-2 col-md-3 mx-auto filtered-city-name">${obj.name}  
+<div class="col-3 col-sm-3 mx-auto filtered-city-name">${obj.name}  
 </div>
-<div class="col-3 col-md-2 mx-auto">
+<div class="col-2 col-sm-2 mx-auto">
 <a class="btn btn-primary filtered-city-button" href="#kayakSearchWidgetContainer" role="button"> Book </a>
 </div>
-<div class="col-3 col-md-2 explore-button mx-auto">
+<div class="col-3 col-sm-2 explore-button mx-auto">
 <a class="btn btn-primary filtered-city-button" href="#searchMap" role="button">Explore</a>
 </div>
 </div>
 </div>
 <div class="container d-block d-sm-none pt-4">
 <div class="row pb-3">
-<div class="col-2 col-md-3 mx-auto filtered-city-name">${obj.name}  
+<div class="col-4 filtered-city-name">${obj.name}  
 </div>
 </div>
 <div class="row pb-3">
-  <div class="col-3 col-md-2 mx-auto">
+  <div class="col-3">
   <a class="btn btn-primary filtered-city-button" href="#kayakSearchWidgetContainer" role="button"> Book </a>
   </div>
 </div>
