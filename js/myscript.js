@@ -335,7 +335,7 @@ newLocations.map(function(obj) {
 el.innerHTML += 
 
 `
-<div class="container pt-4">
+<div class="container d-none d-sm-block pt-4">
 <div class="row pb-3">
 <div class="col-2 col-md-3 mx-auto filtered-city-name">${obj.name}  
 </div>
@@ -345,6 +345,17 @@ el.innerHTML +=
 <div class="col-3 col-md-2 explore-button mx-auto">
 <a class="btn btn-primary filtered-city-button" href="#searchMap" role="button">Explore</a>
 </div>
+</div>
+</div>
+<div class="container d-block d-sm-none pt-4">
+<div class="row pb-3">
+<div class="col-2 col-md-3 mx-auto filtered-city-name">${obj.name}  
+</div>
+</div>
+<div class="row pb-3">
+  <div class="col-3 col-md-2 mx-auto">
+  <a class="btn btn-primary filtered-city-button" href="#kayakSearchWidgetContainer" role="button"> Book </a>
+  </div>
 </div>
 </div>
 `;
