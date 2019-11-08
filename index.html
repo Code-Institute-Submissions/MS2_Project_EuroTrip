@@ -15,32 +15,28 @@
 <body>
 
 <header id="mainHead">
- 
-<nav class="navbar navbar-light bg-transparent fixed-top">
 
-    
-    <div class="navbar-header ml-auto mr-3">
-        <button class="navbar-toggler mt-2 d-block navbar-but" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-light bg-transparent fixed-top">
+        <div class="navbar-header ml-auto mr-3">
+            <button class="navbar-toggler mt-2 d-block navbar-but" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
           <div class="navbar-toggler-icon"></div>
         </button>
-    </div>  
-</nav> 
+        </div>
+    </nav>
 
     <div class="collapse ml-auto" id="navbarToggleExternalContent">
         <div class="bg-transparent pr-4 nav-list fixed-top mt-5">
             <ul class="nav-list mt-3 mr-3">
-                 <li class="nav-list-items pt-1"><a href="#mainHead">Search</a></li>
-                 <li class="nav-list-items pt-1"><a href="#searchMap">Map</a></li>
-                 <li class="nav-list-items pt-1"><a href="#trending">Trending</a></li>
-                 <li class="nav-list-items pt-1"><a href="#kayakSearchWidgetContainer">Book Now</a></li>
+                <li class="nav-list-items pt-1"><a href="#mainHead">Search</a></li>
+                <li class="nav-list-items pt-1"><a href="#searchMap">Map</a></li>
+                <li class="nav-list-items pt-1"><a href="#trending">Trending</a></li>
+                <li class="nav-list-items pt-1"><a href="#kayakSearchWidgetContainer">Book Now</a></li>
             </ul>
         </div>
     </div>
 
-
-
-
 </header>
+
 
 <section class="mx-auto container-fluid pl-0 pr-0 mt-3 my-auto searchContainer">
 
@@ -50,27 +46,24 @@
             <div class="search-bar-sub-header mx-auto"><i>Quick breaks all across Europe</i></div>
         </div>
     </div>
-    
+
     <div class="row mt-3 d-flex justify-content-center">
         <div class="col-6 mr-1 pr-0">
-            <input id="locationsGenerator" class="searchbox form-control mr-0 ml-auto pr-0" type="number" placeholder="Enter your budget €" aria-label="Search">
+            <input id="locationsGenerator" class="searchbox form-control mr-0 ml-auto pr-0" type="number" placeholder="Enter your budget €.." aria-label="Search">
         </div>
 
         <div class="col-1 ml-1 p-0">
             <button id="submitButton" onclick="getSearchValue()" class="btn btn-outline-success mx-auto search-bar-button" type="submit">Search Cities</button>
         </div>
     </div>
-    
+
     <div class="row">
         <div id="cityInBudget" class="col-7 col-lg-5 mx-auto">
-            <!-- Write your comments here 
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-              Launch demo modal
-            </button>-->
         </div>
-    </div>    
-    
+    </div>
+
 </section>
+
 
 <section id="reasonsBanner" class="container mx-auto mt-5">
     <div class="row mx-auto">
@@ -101,18 +94,20 @@
     
 </section>
 
+
 <section id="searchMap" class="mx-auto container no-gutters bg-light mt-5 ">
+    
     <div class="row mx-auto city-search  mb-2">
-            <div id="findCities" class="col-5 col-sm-3 mt-2">
-                Things to do in:
-            </div>
-    
-            <div id="locationField" class="col-6 col-sm-5 mt-2">
-                <input id="autocomplete" class="form-control searchboxMaps" placeholder="Enter a city" type="text" />
-            </div>
-    
-            <div id="controls" class="col-3 d-none d-sm-inline mt-2">
-                <select id="country">
+        <div id="findCities" class="col-5 col-sm-3 mt-2">
+            Things to do in:
+        </div>
+
+        <div id="locationField" class="col-6 col-sm-5 mt-2">
+            <input id="autocomplete" class="form-control searchboxMaps" placeholder="Enter a city" type="text" />
+        </div>
+
+        <div id="controls" class="col-3 d-none d-sm-inline mt-2">
+            <select id="country">
                       <option value="all" selected>Country</option>
                       <option value="fr">France</option>
                       <option value="de">Germany</option>
@@ -121,55 +116,50 @@
                       <option value="pt">Portugal</option>
                       <option value="uk">United Kingdom</option>
                 </select>
-            </div>
+        </div>
     </div>
     
-    
-        <div class="row">
-        
-                <div id="map" class="col-9 col-sm-8 ml-5">
-                    
-                            
-                </div>
-                    
-        
-                <div id="listing" class="col-3 mx-auto d-none d-sm-inline">
-                    <table id="resultsTable">
-                        <tbody id="results"></tbody>
-                    </table>
-                </div>
-                
-                <div style="display: none">
-                    <div id="info-content">
-                        <table>
-                            <tr id="iw-url-row" class="iw_table_row">
-                                <td id="iw-icon" class="iw_table_icon"></td>
-                                <td id="iw-url"></td>
-                            </tr>
-                            <tr id="iw-address-row" class="iw_table_row">
-                                <td class="iw_attribute_name">Address:</td>
-                                <td id="iw-address"></td>
-                            </tr>
-                            <tr id="iw-phone-row" class="iw_table_row">
-                                <td class="iw_attribute_name">Telephone:</td>
-                                <td id="iw-phone"></td>
-                            </tr>
-                            <tr id="iw-rating-row" class="iw_table_row">
-                                <td class="iw_attribute_name">Rating:</td>
-                                <td id="iw-rating"></td>
-                            </tr>
-                            <tr id="iw-website-row" class="iw_table_row">
-                                <td class="iw_attribute_name">Website:</td>
-                                <td id="iw-website"></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-        
-                
-        
+
+    <div class="row">
+
+        <div id="map" class="col-9 col-sm-8 ml-5"></div>
+
+        <div id="listing" class="col-3 mx-auto d-none d-sm-inline">
+            <table id="resultsTable">
+                <tbody id="results"></tbody>
+            </table>
         </div>
+
+        <div style="display: none">
+            <div id="info-content">
+                <table>
+                    <tr id="iw-url-row" class="iw_table_row">
+                        <td id="iw-icon" class="iw_table_icon"></td>
+                        <td id="iw-url"></td>
+                    </tr>
+                    <tr id="iw-address-row" class="iw_table_row">
+                        <td class="iw_attribute_name">Address:</td>
+                        <td id="iw-address"></td>
+                    </tr>
+                    <tr id="iw-phone-row" class="iw_table_row">
+                        <td class="iw_attribute_name">Telephone:</td>
+                        <td id="iw-phone"></td>
+                    </tr>
+                    <tr id="iw-rating-row" class="iw_table_row">
+                        <td class="iw_attribute_name">Rating:</td>
+                        <td id="iw-rating"></td>
+                    </tr>
+                    <tr id="iw-website-row" class="iw_table_row">
+                        <td class="iw_attribute_name">Website:</td>
+                        <td id="iw-website"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
 </section>
+
 
 <section id="trending" class=" mx-auto container-fluid no-gutters mt-5 bg-transparent">
 
@@ -187,9 +177,10 @@
             </div>
             <div class="carousel-item col-md-4">
                 <a href="#"><img class="img-fluid mx-auto d-block" src="//placehold.it/600x500/000/fff?text=2" alt="2"></a>
-                <h3 class="trending-pic-title mt-3">Berlin</h3>
+                <h3 class="trending-pic-title mt-3">Madrid</h3>
                 <p class="trending-pic-para pr-1">
-                    Berlin is a very alternative, cultural city with many walks & tours to explore its history. It also has a very vibrant nightlife.
+                    Madrid is home to the Spanish Royal family as well as the Spanish Government. 
+                    It is a modern metropolitan city and an economical and industrial center of Spain
                 </p>
                 <p class="trending-pic-para">
                     <b>Highlights:</b> Nightlife, Shopping, Museums
@@ -197,42 +188,46 @@
             </div>
             <div class="carousel-item col-md-4">
                 <a href="#"><img class="img-fluid mx-auto d-block" src="//placehold.it/600x500/000/fff?text=3" alt="3"></a>
-                <h3 class="trending-pic-title mt-3">Berlin</h3>
+                <h3 class="trending-pic-title mt-3">London</h3>
                 <p class="trending-pic-para pr-1">
-                    Berlin is a very alternative, cultural city with many walks & tours to explore its history. It also has a very vibrant nightlife.
+                    London is the capital of England and the United Kingdom. The River Thames travels through the city. 
+                    London is the biggest city in western Europe, and the world's largest financial centre.
                 </p>
                 <p class="trending-pic-para">
-                    <b>Highlights:</b> Nightlife, Shopping, Museums
+                    <b>Highlights:</b> Nightlife, Shopping, Finance
                 </p>
             </div>
             <div class="carousel-item col-md-4">
                 <a href="#"><img class="img-fluid mx-auto d-block" src="//placehold.it/600x500/000/fff?text=4" alt="4"></a>
-                <h3 class="trending-pic-title mt-3">Berlin</h3>
+                <h3 class="trending-pic-title mt-3">Venice</h3>
                 <p class="trending-pic-para pr-1">
-                    Berlin is a very alternative, cultural city with many walks & tours to explore its history. It also has a very vibrant nightlife.
+                    Venice is a city in Italy. It is the capital of the Veneto region, which is in the north-east of the country.
+                    It is best known for its romantic Gondola trips & breathtaking canals.
                 </p>
                 <p class="trending-pic-para">
-                    <b>Highlights:</b> Nightlife, Shopping, Museums
+                    <b>Highlights:</b> Architecture, Romantic getaway, Museums
                 </p>
             </div>
             <div class="carousel-item col-md-4">
                 <a href="#"><img class="img-fluid mx-auto d-block" src="//placehold.it/600x500/000/fff?text=5" alt="5"></a>
-                <h3 class="trending-pic-title mt-3">Berlin</h3>
+                <h3 class="trending-pic-title mt-3">Paris</h3>
                 <p class="trending-pic-para pr-1">
-                    Berlin is a very alternative, cultural city with many walks & tours to explore its history. It also has a very vibrant nightlife.
+                    Paris (nicknamed the "City of light") is the capital city of France, and the largest city in France.
+                    It is a diverse city well known for its historic monuments & fashion.
                 </p>
                 <p class="trending-pic-para">
-                    <b>Highlights:</b> Nightlife, Shopping, Museums
+                    <b>Highlights:</b> Nightlife, Shopping, Monuments
                 </p>
             </div>
             <div class="carousel-item col-md-4">
                 <a href="#"><img class="img-fluid mx-auto d-block" src="//placehold.it/600x500/000/fff?text=6" alt="6"></a>
-                <h3 class="trending-pic-title mt-3">Berlin</h3>
+                <h3 class="trending-pic-title mt-3">Athens</h3>
                 <p class="trending-pic-para pr-2">
-                    Berlin is a very alternative, cultural city with many walks & tours to explore its history. It also has a very vibrant nightlife.
+                    Athens became the leading city of Ancient Greece in the first millennium BC.
+                    Laying the foundations of Western civilization today, much of its history can still be seen to this day.
                 </p>
                 <p class="trending-pic-para">
-                    <b>Highlights:</b> Nightlife, Shopping, Museums
+                    <b>Highlights:</b> Architecture, Beaches, History
                 </p>
             </div>
         </div>
@@ -248,22 +243,22 @@
 
 </section>
 
-<section class="mx-auto kayak-section container mt-1 pr-5 pl-5">
-                <div class="row pr-5 pl-5">
-                    <div id="kayakSearchWidgetContainer" class="col-12 mb-5 mx-auto" style="height:250px;width:400px;">
-                        <div class="kayak" style="height:300px;width:400px;"></div>
-                    </div>
-                </div>
-            </section>
 
-                
-<section class="mx-auto container-fluid mt-5 bg-transparent pr-5 pl-5">                
+<section class="mx-auto kayak-section container mt-5 pr-5 pl-5">
+    <div class="row pr-5 pl-5">
+        <div id="kayakSearchWidgetContainer" class="col-12 mb-5 mx-auto" style="height:250px;width:400px;">
+            <div class="kayak" style="height:300px;width:400px;"></div>
+        </div>
+    </div>
+</section>
+
+
 <footer class="footer-main-section no-gutters footer-icons mt-5">
       <a href="https://www.facebook.com/" title="facebook" target="_blank" rel="noopener"><i class="fab fa-facebook fa-2x"></i></a>
       <a href="https://www.instagram.com/" title="instagram" target="_blank" rel="noopener"><i class="fab fa-instagram fa-2x"></i></a>
       <a href="https://twitter.com/" title="twitter" target="_blank" rel="noopener"><i class="fab fa-twitter fa-2x"></i></a>
 </footer>
-</section>
+
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>

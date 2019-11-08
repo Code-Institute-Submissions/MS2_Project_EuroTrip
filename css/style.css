@@ -82,7 +82,7 @@
 }
 
 .filtered-city-button {
-  width: 6em;
+  width: 5em;
 }
 
 
@@ -161,6 +161,17 @@
 
   .searchContainer {
     height: 80vh;
+  }
+}
+
+@media (max-width: 480px) {
+
+
+  .navbar-header {
+    margin-right: auto;
+  }
+  .collapse {
+    margin-right: auto;
   }
 }
 
@@ -254,8 +265,9 @@
 }
 
 #trending {
-    height: 500px;
+    height: 550px;
     width: 80%;
+    margin-bottom: 2em;
 }
 
 /*--footer--*/
@@ -291,12 +303,6 @@
 
 #kayakSearchWidgetContainer {
     height: 350px;
-}
-
-.book-button {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 html {
