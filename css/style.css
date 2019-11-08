@@ -78,6 +78,7 @@
 .filtered-city-name {
   font-size: 30px;
   color: #fff;
+  text-align: center;
 }
 
 .filtered-city-button {
@@ -137,7 +138,7 @@
       }
       #resultsTable {
         border-collapse: collapse;
-        width: 240px;
+        width: 200px;
         opacity: 0.9;
       }
       #rating {
@@ -156,12 +157,8 @@
       }
 
 @media (max-width: 767px) {
-  #listing {
-    display: none;
-  }
-  #controls {
-    display: none;
-  }
+
+
   .searchContainer {
     height: 80vh;
   }
@@ -257,7 +254,7 @@
 }
 
 #trending {
-    height: 550px;
+    height: 500px;
     width: 80%;
 }
 
@@ -290,12 +287,10 @@
 
 .kayak-section {
   height: 350px;
-  z-index: 99;
 }
 
 #kayakSearchWidgetContainer {
     height: 350px;
-  z-index: 99;
 }
 
 .book-button {
@@ -307,4 +302,11 @@
 html {
   scroll-behavior: smooth;
   
+}
+body {
+  overflow-x: hidden;
+}
+
+#info-content {
+  width: 200px;
 }
