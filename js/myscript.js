@@ -290,7 +290,7 @@ el.innerHTML +=
 <a class="btn btn-primary filtered-city-button" href="#kayakSearchWidgetContainer" role="button"> Book </a>
 </div>
 <div class="col-3 col-sm-2 explore-button mx-auto">
-<a class="btn btn-primary filtered-city-button" href="#searchMap" role="button">Explore</a>
+<a id="gMapButton" class="btn btn-primary filtered-city-button" href="#searchMap" role="button">Explore</a>
 </div>
 </div>
 </div>
@@ -358,24 +358,8 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
 });
 
 
-
-// Email link to be added to keep up to date etc.
-/*function sendMail(contactForm) {
-    emailjs.send("rosie", "template_ZKtZzmKA", {                        //service_id, template, 3rd argu is the object that contains the parameters
-        "from_name": contactForm.name.value,
-        "from_email": contactForm.emailaddress.value,
-        "project_request": contactForm.projectsummary.value
-    })
-    .then(
-        function(response) {
-            console.log("SUCCESS", response);
-        },
-        function(error) {
-            console.log("FAILED", error);
-        }
-    );
-    return false;  // To block from loading a new page
-}
-
-*/
-
+$(document).ready(function () {
+    $("#gMapButton").click(function () {
+        $("#searchMap").toggle();
+    });
+});
