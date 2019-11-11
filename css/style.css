@@ -14,7 +14,7 @@
 /*   search bar  ----------------------------------------    */
 
 .searchContainer {
-    height: 60vh;
+    height: 70vh;
     width: 100%;
     margin-top: 20em;
     background-image: url("../assets/bannerphoto.jpg");
@@ -78,13 +78,24 @@
 .filtered-city-name {
   font-size: 30px;
   color: #fff;
-  text-align: center;
 }
 
 .filtered-city-button {
-  width: 5em;
+  width: 6em;
 }
 
+/* Trending Section -------------------------------------*/
+
+.main-explore-button {
+  text-align: center;
+  
+
+}
+
+#exploreMaps {
+  width: 15em;
+  border-radius: 3em;
+}
 
 
 
@@ -138,7 +149,7 @@
       }
       #resultsTable {
         border-collapse: collapse;
-        width: 200px;
+        width: 240px;
         opacity: 0.9;
       }
       #rating {
@@ -157,21 +168,14 @@
       }
 
 @media (max-width: 767px) {
-
-
+  #listing {
+    display: none;
+  }
+  #controls {
+    display: none;
+  }
   .searchContainer {
-    height: 80vh;
-  }
-}
-
-@media (max-width: 480px) {
-
-
-  .navbar-header {
-    margin-right: auto;
-  }
-  .collapse {
-    margin-right: auto;
+    height: 100%;
   }
 }
 
@@ -267,9 +271,7 @@
 #trending {
     height: 550px;
     width: 80%;
-    margin-bottom: 2em;
 }
-
 
 /*--footer--*/
 
@@ -300,10 +302,18 @@
 
 .kayak-section {
   height: 350px;
+  z-index: 99;
 }
 
 #kayakSearchWidgetContainer {
     height: 350px;
+  z-index: 99;
+}
+
+.book-button {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 html {
@@ -312,8 +322,4 @@ html {
 }
 body {
   overflow-x: hidden;
-}
-
-#info-content {
-  width: 200px;
 }

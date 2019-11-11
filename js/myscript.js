@@ -290,7 +290,7 @@ el.innerHTML +=
 <a class="btn btn-primary filtered-city-button" href="#kayakSearchWidgetContainer" role="button"> Book </a>
 </div>
 <div class="col-3 col-sm-2 explore-button mx-auto">
-<a id="gMapButton" class="btn btn-primary filtered-city-button" href="#searchMap" role="button">Explore</a>
+<a class="btn btn-primary filtered-city-button" href="#searchMap" role="button">Explore</a>
 </div>
 </div>
 </div>
@@ -314,6 +314,7 @@ el.innerHTML +=
 
 /*  kayak ap to be embedded to book flights ------------------*/
 
+
 KAYAK.embed({
 container: document.getElementById('kayakSearchWidgetContainer'),
 hostname: "www.kayak.com",
@@ -331,7 +332,6 @@ lc: "en",
 cc: "us",
 mc: "EUR"
 });
-
 
 
 /*   Carousel section -----------------------------------     */ 
@@ -358,8 +358,13 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
 });
 
 
-$(document).ready(function () {
-    $("#gMapButton").click(function () {
-        $("#searchMap").toggle();
-    });
+/* to open up the maps div when explore button and search is clicked */ 
+
+
+$('#exploreMaps').on('click', function() {
+  $('#searchMap').removeClass('d-none');
+});
+
+$('#submitButton').on('click', function() {
+  $('#searchMap').removeClass('d-none');
 });
