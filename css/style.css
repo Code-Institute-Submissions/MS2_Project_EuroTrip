@@ -14,7 +14,7 @@
 /*   search bar  ----------------------------------------    */
 
 .searchContainer {
-    height: 70vh;
+    height: 75vh;
     width: 100%;
     margin-top: 20em;
     background-image: url("../assets/bannerphoto.jpg");
@@ -51,6 +51,8 @@
     -o-box-shadow: 0px 10px 4px rgba(0,0,0,0.2);
     -ms-box-shadow: 0px 10px 4px rgba(0,0,0,0.2);
     box-shadow: 5px 10px 4px rgba(0,0,0,0.2);
+    border-color: #3ca7b8;
+    color: #3ca7b8;
 }
 
 .search-bar-sub-header {
@@ -80,9 +82,6 @@
   color: #fff;
 }
 
-.filtered-city-button {
-  width: 6em;
-}
 
 /* Trending Section -------------------------------------*/
 
@@ -94,12 +93,16 @@
 
 #exploreMaps {
   width: 15em;
-  border-radius: 3em;
+  border-radius: 2.5em;
 }
 
 
 
 /*   Google maps section   --------------------------------   */
+
+#searchMap {
+  background-color: #e2f3f75c;
+}
 
 #map {
         height: 600px;  
@@ -295,7 +298,7 @@
 }
 
 .footer-icons a:hover {
-    color: #FFD4CA;
+    color: #428fa7e3;
     transition-timing-function: ease-in-out;
     transition-duration: 0.5s;
 }
@@ -316,6 +319,51 @@
   margin-right: auto;
 }
 
+
+
+/*--styling--*/
+
+.turq-button {
+  background-color: #51b7d0ba;
+  color: #fff;
+  border-color: #51b7d0ba;
+}
+
+.turq-button:hover {
+  background-color: #428fa7e3;
+  color: #ffffff85;
+  border-color: #f3ffff85;
+}
+
+.search-bar-button:hover {
+  background-color: #428fa7e3;
+  color: #fff;
+  border-color: #f3ffff85;
+  
+}
+
+.filtered-city-button {
+  width: 6em;
+  background-color: #28a745d9;
+}
+
+.filtered-city-button:hover {
+  width: 6em;
+  background-color: #28a7457a;
+}
+
+.nav-list-items a {
+  text-decoration: none;
+  color: #428ea4;
+  
+}
+
+.nav-list-items a:hover {
+  text-decoration: none;
+  color: #15398f;
+}
+
+
 html {
   scroll-behavior: smooth;
   
@@ -323,3 +371,4 @@ html {
 body {
   overflow-x: hidden;
 }
+

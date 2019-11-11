@@ -287,10 +287,10 @@ el.innerHTML +=
 <div class="col-3 col-sm-3 mx-auto filtered-city-name">${obj.name}  
 </div>
 <div class="col-2 col-sm-2 mx-auto">
-<a class="btn btn-primary filtered-city-button" href="#kayakSearchWidgetContainer" role="button"> Book </a>
+<a class="btn btn btn-success filtered-city-button" href="#kayakSearchWidgetContainer" role="button"> Book </a>
 </div>
 <div class="col-3 col-sm-2 explore-button mx-auto">
-<a class="btn btn-primary filtered-city-button" href="#searchMap" role="button">Explore</a>
+<a class="btn btn btn-success filtered-city-button" href="#searchMap" role="button">Explore</a>
 </div>
 </div>
 </div>
