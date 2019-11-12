@@ -44,10 +44,10 @@
         map = new google.maps.Map(document.getElementById('map'), {
     zoom: 4,
     center: {lat: 52.520008, lng: 13.404954},
-          mapTypeControl: false,
-          panControl: false,
-          zoomControl: false,
-          streetViewControl: false
+          mapTypeControl: true,
+          panControl: true,
+          zoomControl: true,
+          streetViewControl: true
         });
 
         infoWindow = new google.maps.InfoWindow({
