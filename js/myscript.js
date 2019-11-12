@@ -266,6 +266,11 @@ var locationz = [
         {lat: 42.650661, lng: 18.094423, cost: 230, name: 'Dubrovnik'},
       ];
 
+function filterArrayByCost(givenArray, cost) {
+  return givenArray.filter(function(place) {
+    return place.cost <= cost;
+  });;
+}
 
 function getSearchValue() {
 
@@ -273,9 +278,7 @@ let searchValue = document.getElementById("locationsGenerator").value;
 var el = document.getElementById("cityInBudget");
 el.innerHTML = "";
 
-let newLocations = locationz.filter(function(place) {
-  return place.cost <= searchValue;
-});
+let newLocations = filterArrayByCost(locationz, searchValue);
 
 newLocations.map(function(obj) {
 //  $('#cityInBudget').append($('<option>').text(obj.name).attr('value', obj.name));  
