@@ -1,10 +1,10 @@
- var map, places, infoWindow;
-      var markers = [];
-      var autocomplete;
-      var MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
-      var hostnameRegexp = new RegExp('^https?://.+?/');
+ let map, places, infoWindow;
+      let markers = [];
+      let autocomplete;
+      let MARKER_PATH = 'https://developers.google.com/maps/documentation/javascript/images/marker_green';
+      let hostnameRegexp = new RegExp('^https?://.+?/');
 
-      var countries = {
+      let countries = {
 
         'br': {
           center: {lat: -14.2, lng: -51.9},
@@ -71,7 +71,7 @@
 
 
       function onPlaceChanged() {
-        var place = autocomplete.getPlace();
+        let place = autocomplete.getPlace();
         if (place.geometry) {
           map.panTo(place.geometry.location);
           map.setZoom(12);
@@ -82,7 +82,7 @@
       }
 
       function search() {
-        var search = {
+        let search = {
           bounds: map.getBounds(),
           types: ['tourist_attraction']
         };
@@ -92,9 +92,9 @@
             clearResults();
             clearMarkers();
 
-            for (var i = 0; i < results.length; i++) {
-              var markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
-              var markerIcon = MARKER_PATH + markerLetter + '.png';
+            for (let i = 0; i < results.length; i++) {
+              let markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
+              let markerIcon = MARKER_PATH + markerLetter + '.png';
 
               markers[i] = new google.maps.Marker({
                 position: results[i].geometry.location,
@@ -112,7 +112,7 @@
       }
 
       function clearMarkers() {
-        for (var i = 0; i < markers.length; i++) {
+        for (let i = 0; i < markers.length; i++) {
           if (markers[i]) {
             markers[i].setMap(null);
           }
@@ -121,7 +121,7 @@
       }
 
       function setAutocompleteCountry() {
-        var country = document.getElementById('country').value;
+        let country = document.getElementById('country').value;
         if (country == 'all') {
           autocomplete.setComponentRestrictions({'country': []});
           map.setCenter({lat: 52.520008, lng: 13.404954});
@@ -142,23 +142,23 @@
       }
 
       function addResult(result, i) {
-        var results = document.getElementById('results');
-        var markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
-        var markerIcon = MARKER_PATH + markerLetter + '.png';
+        let results = document.getElementById('results');
+        let markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
+        let markerIcon = MARKER_PATH + markerLetter + '.png';
 
-        var tr = document.createElement('tr');
+        let tr = document.createElement('tr');
         tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
         tr.onclick = function() {
           google.maps.event.trigger(markers[i], 'click');
         };
 
-        var iconTd = document.createElement('td');
-        var nameTd = document.createElement('td');
-        var icon = document.createElement('img');
+        let iconTd = document.createElement('td');
+        let nameTd = document.createElement('td');
+        let icon = document.createElement('img');
         icon.src = markerIcon;
         icon.setAttribute('class', 'placeIcon');
         icon.setAttribute('className', 'placeIcon');
-        var name = document.createTextNode(result.name);
+        let name = document.createTextNode(result.name);
         iconTd.appendChild(icon);
         nameTd.appendChild(name);
         tr.appendChild(iconTd);
@@ -167,7 +167,7 @@
       }
 
       function clearResults() {
-        var results = document.getElementById('results');
+        let results = document.getElementById('results');
         while (results.childNodes[0]) {
           results.removeChild(results.childNodes[0]);
         }
@@ -175,7 +175,7 @@
 
 
       function showInfoWindow() {
-        var marker = this;
+        let marker = this;
         places.getDetails({placeId: marker.placeResult.place_id},
             function(place, status) {
               if (status !== google.maps.places.PlacesServiceStatus.OK) {
@@ -202,8 +202,8 @@
         }
 
         if (place.rating) {
-          var ratingHtml = '';
-          for (var i = 0; i < 5; i++) {
+          let ratingHtml = '';
+          for (let i = 0; i < 5; i++) {
             if (place.rating < (i + 0.5)) {
               ratingHtml += '&#10025;';
             } else {
@@ -217,8 +217,8 @@
         }
 
         if (place.website) {
-          var fullUrl = place.website;
-          var website = hostnameRegexp.exec(place.website);
+          let fullUrl = place.website;
+          let website = hostnameRegexp.exec(place.website);
           if (website === null) {
             website = 'http://' + place.website + '/';
             fullUrl = website;
@@ -231,7 +231,7 @@
       }
 
 
-var locationz = [
+let locationz = [
         {lat: 52.520008, lng: 13.404954, cost: 130, name: 'Berlin'},
         {lat: 51.507351, lng: -0.127758, cost: 90, name: 'London'},
         {lat: 52.370216, lng: 4.895168, cost: 130, name: 'Amsterdam'},
@@ -275,7 +275,7 @@ function filterArrayByCost(givenArray, cost) {
 function getSearchValue() {
 
 let searchValue = document.getElementById("locationsGenerator").value;
-var el = document.getElementById("cityInBudget");
+let el = document.getElementById("cityInBudget");
 el.innerHTML = "";
 
 if (searchValue < 0) {
