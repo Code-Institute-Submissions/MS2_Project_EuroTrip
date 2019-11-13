@@ -269,7 +269,7 @@ var locationz = [
 function filterArrayByCost(givenArray, cost) {
   return givenArray.filter(function(place) {
     return place.cost <= cost;
-  });;
+  });
 }
 
 function getSearchValue() {
@@ -278,10 +278,16 @@ let searchValue = document.getElementById("locationsGenerator").value;
 var el = document.getElementById("cityInBudget");
 el.innerHTML = "";
 
+if (searchValue < 0) {
+  alert("Nice try, we aren't paying for your holiday! :)")
+}else if (searchValue < 40) {
+  alert("Nothing within budget I'm afraid, try again")
+}else {
+
 let newLocations = filterArrayByCost(locationz, searchValue);
 
 newLocations.map(function(obj) {
-//  $('#cityInBudget').append($('<option>').text(obj.name).attr('value', obj.name));  
+
 el.innerHTML += 
 
 `
@@ -311,8 +317,8 @@ el.innerHTML +=
 `;
   console.log(obj.name);
 });
-
-};
+}
+}
 
 
 /*  kayak ap to be embedded to book flights ------------------*/
