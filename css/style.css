@@ -18,10 +18,10 @@
     width: 100%;
     margin-top: 20em;
     background-image: url("../assets/bannerphoto.jpg");
-      background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 .search-bar-header {
@@ -31,8 +31,8 @@
 }
 
 .searchbox {
-  width: 90%;
-  height: 60px;
+    width: 90%;
+    height: 60px;
     -webkit-box-shadow: 5px 10px 4px rgba(0,0,0,0.2);
     -moz-box-shadow: 0px 10px 4px rgba(0,0,0,0.2);
     -o-box-shadow: 0px 10px 4px rgba(0,0,0,0.2);
@@ -53,7 +53,7 @@ input[type=number] {
 }
 
 .searchboxMaps {
-  width: 90%;
+    width: 90%;
 }
 
 .search-bar-button {
@@ -89,6 +89,7 @@ input[type=number] {
     width: 5px;
     height: 6px;
 }
+
 .filtered-city-name {
   font-size: 30px;
   color: #fff;
@@ -373,6 +374,21 @@ input[type=number] {
 .nav-list-items a:hover {
   text-decoration: none;
   color: #15398f;
+}
+
+.fa-info-circle {
+    color: #6c757dc2;
+    border-radius: 2em;
+    -webkit-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    -o-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    -ms-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+}
+
+.fa-info-circle:hover {
+    color: #fff;
+    border-radius: 2em;
 }
 
 
