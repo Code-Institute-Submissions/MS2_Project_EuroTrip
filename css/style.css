@@ -56,17 +56,6 @@ input[type=number] {
     width: 90%;
 }
 
-.search-bar-button {
-  height: 60px;
-    -webkit-box-shadow: 5px 10px 4px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 10px 4px rgba(0,0,0,0.2);
-    -o-box-shadow: 0px 10px 4px rgba(0,0,0,0.2);
-    -ms-box-shadow: 0px 10px 4px rgba(0,0,0,0.2);
-    box-shadow: 5px 10px 4px rgba(0,0,0,0.2);
-    border-color: #3ca7b8;
-    color: #3ca7b8;
-}
-
 .search-bar-sub-header {
     text-align: center;
     font-size: 20px;
@@ -346,6 +335,18 @@ input[type=number] {
   background-color: #428fa7e3;
   color: #ffffff85;
   border-color: #f3ffff85;
+}
+
+.search-bar-button {
+  height: 60px;
+    -webkit-box-shadow: 5px 10px 4px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 10px 4px rgba(0,0,0,0.2);
+    -o-box-shadow: 0px 10px 4px rgba(0,0,0,0.2);
+    -ms-box-shadow: 0px 10px 4px rgba(0,0,0,0.2);
+    box-shadow: 5px 10px 4px rgba(0,0,0,0.2);
+    border-color: #25a04178;
+    color: #fff;
+    background-color: #25a041e0;
 }
 
 .search-bar-button:hover {
