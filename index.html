@@ -47,23 +47,23 @@
         </div>
     </div>
 
-    <div class="row mt-3 d-flex justify-content-center">
+    <div class="row mt-3 d-flex mr-0 justify-content-center">
         <div class="col-6 mr-1 pr-0">
             <input id="locationsGenerator" class="searchbox form-control mr-0 ml-auto pr-0" type="number" min="0" placeholder="Enter your budget €.." aria-label="Search">
         </div>
 
         <div class="col-1 ml-1 p-0">
-            <button id="submitButton" onclick="getSearchValue()" class="btn btn-outline-success mx-auto search-bar-button" type="submit">Search Cities</button>
+            <button id="submitButton" class="btn btn-outline-success mx-auto search-bar-button" type="submit">Search Cities</button>
         </div>
     </div>
 
     <div class="row">
-        <div id="cityInBudget" class="col-7 col-lg-5 mx-auto ">
+        <div id="cityInBudget" class="col-7 col-lg-5 mx-auto px-0">
         </div>
     </div>
     
     <div class="row mb-2">
-        <div class="col-8 mx-auto main-explore-button p-4 mb-2">
+        <div class="col-12 mx-auto main-explore-button p-4 mb-2">
             <a id="exploreMaps" class="btn btn-success p-3 turq-button" href="#searchMap">Check out the cities in our maps section </a>
         </div>
     </div>
@@ -146,7 +146,7 @@
                         Our maps function is pretty simple, just type in the city that you want to go to and the best attractions will populate on the map.
                     </p>
                     <p>
-                        Just click on the icon and see what each place has to offer, pretty simple!
+                        Just click on the icon and see what each place has to offer, pretty easy!
                     </p>
                     <p>
                         If you wish to search the cities within a particular country just select it from our handy dropdown menu,
@@ -171,7 +171,7 @@
 
     <div class="row">
 
-        <div id="map" class="col-9 col-sm-8 ml-5"></div>
+        <div id="map" class="col-9 col-sm-8 mx-auto"></div>
 
         <div id="listing" class="col-3 mx-auto d-none d-md-inline">
             <table id="resultsTable">
@@ -320,7 +320,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="https://www.kayak.com/affiliate/widget-v2.js"></script>
 <script src="js/myscript.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDT4SwV9yIoHlKrQ9YULJKPJBYyPpjpyWw&libraries=places&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1kIPzXxCV-rz2DKDgW2wUwfbVOSDG4hU&libraries=places&callback=initMap"></script>
     
 </body>
 

@@ -71,7 +71,7 @@ input[type=number] {
   scrollbar-width: 5px;
   -ms-overflow-style: none;
   height: 200px;
-  width: 300px;
+  width: 100%;
 }
 
 #cityInBudget::-webkit-scrollbar {
@@ -97,7 +97,6 @@ input[type=number] {
   width: 15em;
   border-radius: 2.5em;
 }
-
 
 
 /*   Google maps section   --------------------------------   */
@@ -172,17 +171,7 @@ input[type=number] {
         text-align: right;
       }
 
-@media (max-width: 767px) {
-  #listing {
-    display: none;
-  }
-  #controls {
-    display: none;
-  }
-  .searchContainer {
-    height: 100%;
-  }
-}
+
 
 /*   Carousel section      */      
       
@@ -392,6 +381,19 @@ input[type=number] {
     border-radius: 2em;
 }
 
+@media (max-width: 767px) {
+  #listing {
+    display: none;
+  }
+  #controls {
+    display: none;
+  }
+  .searchContainer {
+    height: 100%;
+  }
+  
+}
+
 
 html {
   scroll-behavior: smooth;
@@ -401,3 +403,7 @@ body {
   overflow-x: hidden;
 }
 
+.row {
+    margin-right: auto;
+    margin-left: auto;
+}
