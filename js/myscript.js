@@ -295,9 +295,9 @@ let el = document.getElementById("cityInBudget");
 el.innerHTML = "";
 
 if (searchValue < 1) {
-  alert("Nice try, we aren't paying for your holiday! :)")
+  alert("Nice try, we aren't paying for your holiday! :)");
 }else if (searchValue < 40) {
-  alert("Nothing within budget I'm afraid, try again")
+  alert("Nothing within budget I'm afraid, try again");
 }else {
 
 let newLocations = filterArrayByCost(locationz, searchValue);
@@ -308,32 +308,30 @@ el.innerHTML +=
 
 `
 <div class="container d-none d-sm-block pt-4">
-<div class="row pb-3">
-<div class="col-3 col-sm-3 mx-auto filtered-city-name">${obj.name}  
-</div>
-<div class="col-2 col-sm-2 mx-auto">
-<a class="btn btn btn-success filtered-city-button" href="https://www.kayak.com/" role="button" title="kayak" target="_blank" rel="noopener"> Book </a>
-</div>
-<div class="col-3 col-sm-2 explore-button mx-auto">
-<a class="btn btn btn-success filtered-city-button" href="#searchMap" role="button">Explore</a>
-</div>
-</div>
+    <div class="row pb-3">
+        <div class="col-3 col-sm-3 mx-auto filtered-city-name">${obj.name}
+        </div>
+        <div class="col-2 col-sm-2 mx-auto">
+            <a class="btn btn btn-success filtered-city-button" href="https://www.kayak.com/" role="button" title="kayak" target="_blank" rel="noopener"> Book </a>
+        </div>
+        <div class="col-3 col-sm-2 explore-button mx-auto">
+            <a class="btn btn btn-success filtered-city-button" href="#searchMap" role="button">Explore</a>
+        </div>
+    </div>
 </div>
 <div class="container d-block d-sm-none pt-4">
-<div class="row pb-3">
-<div class="col-4 filtered-city-name">${obj.name}  
+    <div class="row pb-3">
+        <div class="col-4 filtered-city-name">${obj.name}
+        </div>
+    </div>
+    <div class="row pb-3">
+        <div class="col-3">
+            <a class="btn btn-primary filtered-city-button" href="https://www.kayak.com/" role="button" title="kayak" target="_blank" rel="noopener" aria-label="kayak"> Book </a>
+        </div>
+    </div>
 </div>
-</div>
-<div class="row pb-3">
-  <div class="col-3">
-  <a class="btn btn-primary filtered-city-button" href="https://www.kayak.com/" role="button" title="kayak" target="_blank" rel="noopener"> Book </a>
-  </div>
-</div>
-</div>
-`;
-  console.log(obj.name);
-});
-}
+`;})
+;}
 }
 
 
