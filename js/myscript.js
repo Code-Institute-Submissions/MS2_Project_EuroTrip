@@ -376,8 +376,6 @@ $('#exploreMaps').on('click', function() {
 
 $('#submitButton').on('click', function() {
   $('#searchMap').removeClass('d-none');
+  getSearchValue();
 });
 
-$('#submitButton').on('click', function() {
-  $('#mapLink').removeClass('d-none');
-});
