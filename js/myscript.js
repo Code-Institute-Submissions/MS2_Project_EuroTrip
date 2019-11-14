@@ -10,7 +10,6 @@
           center: {lat: -14.2, lng: -51.9},
           zoom: 4
         },
-
         'fr': {
           center: {lat: 46.2, lng: 2.2},
           zoom: 6
@@ -19,12 +18,10 @@
           center: {lat: 51.2, lng: 10.4},
           zoom: 6
         },
-
         'it': {
           center: {lat: 41.9, lng: 12.6},
           zoom: 6
         },
-
         'es': {
           center: {lat: 40.5, lng: -3.7},
           zoom: 6
@@ -33,10 +30,29 @@
           center: {lat: 39.4, lng: -8.2},
           zoom: 7
         },
-
         'uk': {
           center: {lat: 54.8, lng: -4.6},
           zoom: 6
+        },
+        'hu': {
+          center: {lat: 47.1625, lng: 19.5033},
+          zoom: 7
+        },
+        'no': {
+          center: {lat: 60.4720, lng: 8.4689},
+          zoom: 5
+        },
+        'gr': {
+          center: {lat: 39.0742, lng: 21.8243},
+          zoom: 8
+        },
+        'po': {
+          center: {lat: 51.9194, lng: 19.1451},
+          zoom: 7
+        },
+        'cr': {
+          center: {lat: 45.1000, lng: 15.2},
+          zoom: 8
         }
       };
       
@@ -322,7 +338,6 @@ el.innerHTML +=
 
 
 /*  kayak ap to be embedded to book flights ------------------*/
-
 
 KAYAK.embed({
 container: document.getElementById('kayakSearchWidgetContainer'),
