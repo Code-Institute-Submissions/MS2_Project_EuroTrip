@@ -372,3 +372,6 @@ $('#submitButton').on('click', function() {
   getSearchValue();
 });
 
+$('#submitButton').on('click', function() {
+  $('#cityInBudget').addClass('test');
+});

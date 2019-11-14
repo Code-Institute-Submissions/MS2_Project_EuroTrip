@@ -20,7 +20,6 @@
 /*   search bar  ----------------------------------------    */
 
 .searchContainer {
-    height: 80vh;
     width: 100%;
     margin-top: 20em;
     background-image: url("../assets/bannerphoto.jpg");
@@ -73,16 +72,12 @@ input[type=number] {
 }
 
 #cityInBudget {
-  overflow-y: scroll;
-  scrollbar-width: 5px;
-  -ms-overflow-style: none;
   height: 200px;
   width: 100%;
 }
 
-#cityInBudget::-webkit-scrollbar {
-    width: 5px;
-    height: 6px;
+.scroll-on-click {
+  overflow-y: scroll;
 }
 
 .filtered-city-name {
