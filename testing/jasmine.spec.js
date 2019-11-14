@@ -31,3 +31,28 @@ describe('Testing that functions work as intended- ', ()=>{
   });
   
 })
+
+describe("Google maps - ", function () {
+
+    beforeAll(() => {
+        var map, info, country;
+        map = document.createElement("div");
+        info = document.createElement("div");
+        country = document.createElement("div");
+
+        map.setAttribute("id", 'map');
+        info.setAttribute("id", 'info-content');
+        country.setAttribute("id", 'country');
+
+        document.body.append(map);
+        document.body.append(info);
+        document.body.append(country);
+    })
+
+      it("init works", function () {
+          expect(document.getElementById('map').hasChildNodes()).toEqual(false);
+          initMap()
+          expect(document.getElementById('map').hasChildNodes()).toEqual(true);
+      });
+
+  });
