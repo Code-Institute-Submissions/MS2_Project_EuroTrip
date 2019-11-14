@@ -294,16 +294,6 @@ input[type=number] {
     transition-duration: 0.5s;
 }
 
-.kayak-section {
-  height: 350px;
-  z-index: 99;
-}
-
-#kayakSearchWidgetContainer {
-    height: 350px;
-  z-index: 99;
-}
-
 .book-button {
   text-align: center;
   margin-left: auto;

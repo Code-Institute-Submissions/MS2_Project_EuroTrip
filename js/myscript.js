@@ -46,11 +46,11 @@
           center: {lat: 39.0742, lng: 21.8243},
           zoom: 8
         },
-        'po': {
+        'pl': {
           center: {lat: 51.9194, lng: 19.1451},
           zoom: 7
         },
-        'cr': {
+        'hr': {
           center: {lat: 45.1000, lng: 15.2},
           zoom: 8
         }
@@ -336,26 +336,6 @@ el.innerHTML +=
 }
 }
 
-
-/*  kayak ap to be embedded to book flights ------------------*/
-
-KAYAK.embed({
-container: document.getElementById('kayakSearchWidgetContainer'),
-hostname: "www.kayak.com",
-autoPosition: true,
-defaultProduct: "flights",
-enabledProducts: ["hotels", "flights"],
-startDate: "2018-10-02",
-endDate: "2018-10-28",
-origin: "New York, NY",
-destination: "Boston, MA",
-ssl: true,
-affiliateId: "acme_corp",
-isInternalLoad: false,
-lc: "en",
-cc: "us",
-mc: "EUR"
-});
 
 
 /*   Carousel section -----------------------------------     */ 
