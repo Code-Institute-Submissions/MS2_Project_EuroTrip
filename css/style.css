@@ -9,17 +9,18 @@
     list-style-type: none;
     font-size: 25px;
     z-index: 100;
+    font-weight: 500;
 }
 
 .navbar-toggler-icon {
-  width: 3em;
-  height: 3em;
+  width: 2.5em;
+  height: 2.5em;
 }
 
 /*   search bar  ----------------------------------------    */
 
 .searchContainer {
-    height: 75vh;
+    height: 80vh;
     width: 100%;
     margin-top: 20em;
     background-image: url("../assets/bannerphoto.jpg");
@@ -289,7 +290,7 @@ input[type=number] {
 }
 
 .footer-icons a:hover {
-    color: #428fa7e3;
+    color: #664e4c9e;
     transition-timing-function: ease-in-out;
     transition-duration: 0.5s;
 }
