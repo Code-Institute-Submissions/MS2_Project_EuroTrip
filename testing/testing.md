@@ -27,7 +27,6 @@ The intention of this website was to allow a user to easily see where they can g
 - iPad & iPad mini
 - Samsung's 6, 8, 10 & A7
 - 
-![Responsive design](https://github.com/brianscan14/MS2_Project_EuroTrip/blob/master/assets/images/responsive.PNG)
 
 The audit tool from google inspect was also used in order to improve on three aspects:
 
