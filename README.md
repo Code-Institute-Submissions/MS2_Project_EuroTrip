@@ -6,8 +6,6 @@ This website was created as a platform for users to quickly see where they can g
 
 A live demo can be found [here](https://brianscan14.github.io/MS2_Project_EuroTrip/index.html).
 
-this section will hopefully have the [responsive](http://ami.responsivedesign.is/) website which sows your project on the different screens as a snapshot.
-
 ### UX:
 
 The main goal of the site is to offer a quick and simple way for a customer to decide where they want to go in Europe on a holiday break for their budget. The page is kept simple so as to not distract the customer too much from their task and hence incorporates a very sleek, neutral and professional design. 
@@ -94,7 +92,7 @@ If the [kayak](https://www.kayak.com/) official API was available then this also
 
 ### Testing:
 
-Testing section has been outlined in the following [md file](https://github.com/brianscan14/MS2_Project_EuroTrip/blob/master/testing/testing.md).
+Testing section has been outlined in the following [testing.md file](https://github.com/brianscan14/MS2_Project_EuroTrip/blob/master/testing/testing.md).
 
 ### Deployment
 
