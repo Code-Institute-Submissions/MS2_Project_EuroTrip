@@ -102,8 +102,6 @@ Testing is going to be added in a seperate testing md file.
 
 ### Deployment
 
-[AWS Cloud9](https://aws.amazon.com/cloud9/?nc2=type_a) was utilised for this project, changes were committed to git and pushed to GitHub as they were made using this IDE. To deploy this page to GitHub pages from its GitHub repository, you need to:
-
 To deploy EuroTrip to GitHub Pages from its [GitHub repository](https://github.com/brianscan14/MS2_Project_EuroTrip), the following steps were taken:
 
 1. Log into GitHub.
@@ -126,7 +124,7 @@ To clone this project from GitHub:
 6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-git clone https://github.com/USERNAME/REPOSITORY
+git clone https://github.com/brianscan14/MS2_Project_EuroTrip.git
 ```
 
 1. Press Enter. Your local clone will be created.
