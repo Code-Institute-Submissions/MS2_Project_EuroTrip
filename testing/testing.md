@@ -2,7 +2,7 @@
 
 #### Manual Testing
 
-###### **Panning**
+###### **Planning**
 
 ------
 
@@ -26,7 +26,6 @@ The intention of this website was to allow a user to easily see where they can g
 - iPhones 5 & 7,
 - iPad & iPad mini
 - Samsung's 6, 8, 10 & A7
-- 
 
 The audit tool from google inspect was also used in order to improve on three aspects:
 
