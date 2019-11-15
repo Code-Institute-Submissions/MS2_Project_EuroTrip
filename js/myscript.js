@@ -1,3 +1,5 @@
+//Declaring variable to be used in the JS
+
 let map, places, infoWindow;
 let markers = [];
 let autocomplete;
@@ -91,6 +93,10 @@ let locationz = [
   {lat: 42.650661, lng: 18.094423, cost: 230, name: 'Dubrovnik'},
 ];
 
+/**
+ * @initMap
+ * This function calls the map into the div and initialises it
+ */
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
 zoom: 4,
@@ -105,22 +111,26 @@ center: {lat: 52.520008, lng: 13.404954},
     content: document.getElementById('info-content')
   });
 
-
+  //calls autocpmlete and assocaites it to the input value
   autocomplete = new google.maps.places.Autocomplete(
-      /** @type {!HTMLInputElement} */ (
-          document.getElementById('autocomplete')), {
+    //restricts to selected country and cities type
+       (document.getElementById('autocomplete')), {
         types: ['(cities)'],
+        componentRestrictions: countryRestrict
       });
   places = new google.maps.places.PlacesService(map);
 
   autocomplete.addListener('place_changed', onPlaceChanged);
 
-
+  //listener for when a countries selected
   document.getElementById('country').addEventListener(
       'change', setAutocompleteCountry);
 }
 
-
+/**
+ * @onPlaceChanged
+ * returns place detials for city and zooms in on map
+ */
 function onPlaceChanged() {
   let place = autocomplete.getPlace();
   if (place.geometry) {
@@ -132,6 +142,10 @@ function onPlaceChanged() {
   }
 }
 
+/**
+ * @search
+ * searches for tourist attractions within the map's viewport
+ */
 function search() {
   let search = {
     bounds: map.getBounds(),
@@ -143,16 +157,18 @@ function search() {
       clearResults();
       clearMarkers();
 
+      //setting the markers with letters of alphabet as titles
       for (let i = 0; i < results.length; i++) {
         let markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
         let markerIcon = MARKER_PATH + markerLetter + '.png';
-
+        
+        //animated to drop markers one at a time in delayed fashion
         markers[i] = new google.maps.Marker({
           position: results[i].geometry.location,
           animation: google.maps.Animation.DROP,
           icon: markerIcon
         });
-
+        //info window appears when a marer is clicked
         markers[i].placeResult = results[i];
         google.maps.event.addListener(markers[i], 'click', showInfoWindow);
         setTimeout(dropMarker(i), i * 100);
@@ -162,6 +178,10 @@ function search() {
   });
 }
 
+/**
+ * @clearMarkers
+ * to clear the markers when another city is search or country slected form dropdown
+ */
 function clearMarkers() {
   for (let i = 0; i < markers.length; i++) {
     if (markers[i]) {
@@ -171,6 +191,10 @@ function clearMarkers() {
   markers = [];
 }
 
+/**
+ * @setAutocompleteCountry
+ * sets country restriction to one that is selected and then zooms to that country
+ */
 function setAutocompleteCountry() {
   let country = document.getElementById('country').value;
   if (country == 'all') {
@@ -192,6 +216,11 @@ function dropMarker(i) {
   };
 }
 
+
+/**
+ * @addResult
+ * adds reult names to a section beside the map
+ */
 function addResult(result, i) {
   let results = document.getElementById('results');
   let markerLetter = String.fromCharCode('A'.charCodeAt(0) + (i % 26));
@@ -224,7 +253,10 @@ function clearResults() {
   }
 }
 
-
+/**
+ * @showInfoWindow
+ * gets the details for the attraction selected and shows in info window
+ */
 function showInfoWindow() {
   let marker = this;
   places.getDetails({placeId: marker.placeResult.place_id},
@@ -237,6 +269,10 @@ function showInfoWindow() {
       });
 }
 
+/**
+ * @buildIWContent
+ * loads the info gathered in infowindow function and puts it into HTML elements
+ */
 function buildIWContent(place) {
   document.getElementById('iw-icon').innerHTML = '<img class="cityIcon" ' +
       'src="' + place.icon + '"/>';
@@ -281,7 +317,11 @@ function buildIWContent(place) {
   }
 }
 
-
+/**
+ * @filterArrayByCost
+ * add html content to a div below search bar, or an alert depending on input,
+ * eligible cities retuned in the div
+ */
 function filterArrayByCost(givenArray, cost) {
   return givenArray.filter(function(place) {
     return place.cost <= cost;
@@ -334,11 +374,12 @@ el.innerHTML +=
 ;}
 }
 
+/* Seperate Event Listners Section */
 
 
-/*   Carousel section -----------------------------------     */ 
+/*   Carousel section      */ 
 
-
+//apends card to end depending wheter user clicks left or right
 $('#carouselExample').on('slide.bs.carousel', function (e) {
 
     let $e = $(e.relatedTarget);
@@ -367,8 +408,11 @@ $('#exploreMaps').on('click', function() {
   $('#searchMap').removeClass('d-none');
 });
 
+
 $('#submitButton').on('click', function() {
   $('#searchMap').removeClass('d-none');
+  
+  //adding scroll class to hidden div so user knows when to scroll 
   $('#cityInBudget').addClass('scroll-on-click');
   getSearchValue();
 });
