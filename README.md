@@ -140,8 +140,10 @@ All content on the home page was written by the developer.
 
 #### Acknowledgments
 
-To be added...
+The carousel was gotten from BS4's [carousel](https://getbootstrap.com/docs/4.3/components/carousel/) and edited, using several examples such as [this](https://codepen.io/maqnus/pen/rWVGZW?fbclid=IwAR0Cf0LxBshNQkZ3Ypyp3GyJvB0lc8C9SJ42bUrbG0PymvkIK9HZzBTTfdc) vanilla one, this one on [codepen](https://codepen.io/omowunmiekun/pen/GRKPbxW?fbclid=IwAR1QBSgMFNPi1gPe-jM5UdwuTUkRzAxU1WgxW9F7__ClunzTe6hDkhjgxBA) and [W3schools's](https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp) example.
 
-#### Disclaimer
+The Maps and Places API used were gotten form Google's [maps](https://developers.google.com/maps/documentation/javascript/tutorial) & [places](https://developers.google.com/places/web-service/intro) documentation and modified to fit the page's needs.
 
-This is for educational purposes only.
+##### Disclaimer
+
+The content of this website, including the images used, are for educational purposes only.
