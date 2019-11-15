@@ -34,15 +34,13 @@ This website was designed with two screen size ranges in mind:
 As a result of this the below wireframes consist largely of only 2 mock-up drawings (contact & footer are the exceptions). 
 
 - Navbar
-  - xs-xl screen
-- Footer
-  - xs-xl screen
+  - [xs-xl screen](https://github.com/brianscan14/MS2_Project_EuroTrip/blob/master/wireframes/navbar_xs_xl.jpg?raw=true)
 - Home
-  - xs screen
-  - sm-xl screen
+  - [xs screen](https://github.com/brianscan14/MS2_Project_EuroTrip/blob/master/wireframes/home_xs.jpg?raw=true)
+  - [sm-xl screen](https://github.com/brianscan14/MS2_Project_EuroTrip/blob/master/wireframes/home_sm_xl.jpg?raw=true)
 - Google maps
-  - xs screen
-  - sm-xl screen
+  - [xs screen](https://github.com/brianscan14/MS2_Project_EuroTrip/blob/master/wireframes/maps_xs.jpg?raw=true)
+  - [sm-xl screen](https://github.com/brianscan14/MS2_Project_EuroTrip/blob/master/wireframes/maps_sm_xl.jpg?raw=true)
 
 ### **Technologies:**
 
