@@ -89,7 +89,7 @@ The main functions were tested in this project with Jasmine as a means of ensuri
 
 - [Jasmine HTML](https://github.com/brianscan14/MS2_Project_EuroTrip/blob/master/testing/jasmine.html)
 - [Jasmine JS specs](https://github.com/brianscan14/MS2_Project_EuroTrip/blob/master/testing/jasmine.spec.js)
-- [EuroTrip JS](https://github.com/brianscan14/MS2_Project_EuroTrip/blob/master/js/myscript.js)
+- [EuroTrip JS](https://github.com/brianscan14/MS2_Project_EuroTrip/blob/master/assets/js/script.js)
 
 ###### Running the tests
 

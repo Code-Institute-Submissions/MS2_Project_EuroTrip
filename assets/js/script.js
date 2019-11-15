@@ -115,8 +115,7 @@ center: {lat: 52.520008, lng: 13.404954},
   autocomplete = new google.maps.places.Autocomplete(
     //restricts to selected country and cities type
        (document.getElementById('autocomplete')), {
-        types: ['(cities)'],
-        componentRestrictions: countryRestrict
+        types: ['(cities)']
       });
   places = new google.maps.places.PlacesService(map);
 
