@@ -1,15 +1,16 @@
-/*   navbar    ----------------------------------------  */
+/*   navbar  */
+
 
 .navbar-toggler-icon {
-    z-index: 100;
+  z-index: 100;
 }
 
-.nav-list{
-    text-align: right;
-    list-style-type: none;
-    font-size: 25px;
-    z-index: 100;
-    font-weight: 500;
+.nav-list {
+  text-align: right;
+  list-style-type: none;
+  font-size: 25px;
+  z-index: 100;
+  font-weight: 500;
 }
 
 .navbar-toggler-icon {
@@ -17,58 +18,63 @@
   height: 2.5em;
 }
 
-/*   search bar  ----------------------------------------    */
+
+/*   search bar    */
+
 
 .searchContainer {
-    width: 100%;
-    margin-top: 20em;
-    background-image: url("../assets/bannerphoto.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+  width: 100%;
+  margin-top: 20em;
+  background-image: url("../assets/bannerphoto.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .search-bar-header {
-    text-align: center;
-    font-size: 30px;
-    color: #fff;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 500;
 }
 
 .searchbox {
-    width: 90%;
-    height: 60px;
-    -webkit-box-shadow: 5px 10px 4px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 10px 4px rgba(0,0,0,0.2);
-    -o-box-shadow: 0px 10px 4px rgba(0,0,0,0.2);
-    -ms-box-shadow: 0px 10px 4px rgba(0,0,0,0.2);
-    box-shadow: 5px 10px 4px rgba(0,0,0,0.2);
-    
+  width: 90%;
+  height: 60px;
+  -webkit-box-shadow: 5px 10px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 10px 4px rgba(0, 0, 0, 0.2);
+
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 input[type=number] {
-    -moz-appearance:textfield; /* Firefox */
+  -moz-appearance: textfield;
+  /* Firefox */
 }
 
 .searchboxMaps {
-    width: 90%;
+  width: 90%;
 }
 
 .search-bar-sub-header {
-    text-align: center;
-    font-size: 20px;
-    color: #fff;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
 }
 
 .search-margin {
-    margin-top: 5em;
+  margin-top: 5em;
 }
 
 #cityInBudget {
@@ -88,77 +94,85 @@ input[type=number] {
 
 /*   Google maps section   */
 
+
 #searchMap {
   background-color: #e2f3f75c;
 }
 
 #map {
-        height: 700px;  
-        width: 100%;  
-       }
+  height: 700px;
+  width: 100%;
+}
 
-      .city-search {
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        z-index: 1;
-        width: 100%;
-      }
-      
-      #locationField {
-        width: 100%;
-      }
-      
-      #findCities {
-        text-align: right;
-      }
+.city-search {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+  width: 100%;
+}
 
-      #controls {
-        width: 100%;
-      }
-      
+#locationField {
+  width: 100%;
+}
 
-      #listing {
-        width: 100%;
-        height: 700px;
-        overflow: auto;
-        cursor: pointer;
-        overflow-x: hidden;
-      }
+#findCities {
+  text-align: right;
+}
 
-      .placeIcon {
-        width: 20px;
-        height: 34px;
-        margin: 4px;
-      }
-      .cityIcon {
-        width: 24px;
-        height: 24px;
-      }
-      #resultsTable {
-        border-collapse: collapse;
-        width: 100%;
-        opacity: 0.9;
-      }
-      #rating {
-        font-size: 13px;
-        font-family: Arial Unicode MS;
-      }
-      .iw_table_row {
-        height: 18px;
-      }
-      .iw_attribute_name {
-        font-weight: bold;
-        text-align: right;
-      }
-      .iw_table_icon {
-        text-align: right;
-      }
+#controls {
+  width: 100%;
+}
 
-/* Trending Section -------------*/
+
+#listing {
+  width: 100%;
+  height: 700px;
+  overflow: auto;
+  cursor: pointer;
+  overflow-x: hidden;
+}
+
+.placeIcon {
+  width: 20px;
+  height: 34px;
+  margin: 4px;
+}
+
+.cityIcon {
+  width: 24px;
+  height: 24px;
+}
+
+#resultsTable {
+  border-collapse: collapse;
+  width: 100%;
+  opacity: 0.9;
+}
+
+#rating {
+  font-size: 13px;
+  font-family: Arial Unicode MS;
+}
+
+.iw_table_row {
+  height: 18px;
+}
+
+.iw_attribute_name {
+  font-weight: bold;
+  text-align: right;
+}
+
+.iw_table_icon {
+  text-align: right;
+}
+
+
+/* Trending Section */
 
 
 .main-explore-button {
@@ -170,75 +184,69 @@ input[type=number] {
   border-radius: 2.5em;
 }
 
-/*   Carousel section      */      
-      
-      
+
+/*   Carousel section      */
+
+
 /*below ipad screen size only one slide card shown*/
 
 @media (min-width: 768px) {
 
-    /* 3 cards */
-    .carousel-inner .active,
-    .carousel-inner .active + .carousel-item,
-    .carousel-inner .active + .carousel-item + .carousel-item {
-        display: block;
-    }
-    
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) 
-    + .carousel-item,
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) 
-    + .carousel-item + .carousel-item {
-        transition: none;
-        margin-right: initial;
-    }
-    
-    .carousel-inner .carousel-item-next,
-    .carousel-inner .carousel-item-prev {
-      position: relative;
+  .carousel-inner .active,
+  .carousel-inner .active+.carousel-item,
+  .carousel-inner .active+.carousel-item+.carousel-item {
+    display: block;
+  }
 
-    }
-    
-    .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
-        position: absolute;
-        top: 0;
-        right: -33.3333%;
-        z-index: -1;
-        display: block;
-        visibility: visible;
-    }
-    
-    /* card items going left */
-    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
-    .carousel-item-next.carousel-item-left + .carousel-item,
-    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
-    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translateX(-100%);
-        visibility: visible;
-    }
-    
-    /* animatons start at far right card */
-    .carousel-inner .carousel-item-prev.carousel-item-right {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        display: block;
-        visibility: visible;
-    }
-    
-    /* items going right*/
-    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
-    .carousel-item-prev.carousel-item-right + .carousel-item,
-    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
-    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translateX(100%);
-        visibility: visible;
-        display: block;
-    }
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item,
+  .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item {
+    transition: none;
+    margin-right: initial;
+  }
 
+  .carousel-inner .carousel-item-next,
+  .carousel-inner .carousel-item-prev {
+    position: relative;
+
+  }
+
+  .carousel-inner .active.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+    position: absolute;
+    top: 0;
+    right: -33.3333%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  .active.carousel-item-left+.carousel-item-next.carousel-item-left,
+  .carousel-item-next.carousel-item-left+.carousel-item,
+  .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item,
+  .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item {
+    position: relative;
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+
+  .carousel-inner .carousel-item-prev.carousel-item-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+  }
+
+  .active.carousel-item-right+.carousel-item-prev.carousel-item-right,
+  .carousel-item-prev.carousel-item-right+.carousel-item,
+  .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item,
+  .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item {
+    position: relative;
+    transform: translateX(100%);
+    visibility: visible;
+    display: block;
+  }
 }
 
 .carousel-item img {
@@ -248,49 +256,49 @@ input[type=number] {
 }
 
 .carousel-item:hover img {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -webkit-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-    -o-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-    -ms-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-    overflow: hidden;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 #trending {
-    height: 500px;
-    width: 80%;
+  height: 500px;
+  width: 80%;
 }
 
 
-/*--footer--*/
+/*  footer  */
 
 
 .footer-main-section {
-    width: 100%;
-    background-color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    margin-top: 1.5em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1em;
-    display: block;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  display: block;
 }
 
 .footer-icons a {
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    color: #664E4C;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  color: #664E4C;
 }
 
 .footer-icons a:hover {
-    color: #664e4c9e;
-    transition-timing-function: ease-in-out;
-    transition-duration: 0.5s;
+  color: #664e4c9e;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
 }
 
 .book-button {
@@ -301,6 +309,7 @@ input[type=number] {
 
 
 /*--bottom hero image--*/
+
 
 .panarama-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/panarama.jpg");
@@ -313,7 +322,6 @@ input[type=number] {
   max-width: 1250px;
   margin-right: auto;
   margin-left: auto;
-
 }
 
 .panarama-text {
@@ -326,7 +334,8 @@ input[type=number] {
 }
 
 
-/*--styling--*/
+/*  styling  */
+
 
 .turq-button {
   background-color: #51b7d0ba;
@@ -342,21 +351,21 @@ input[type=number] {
 
 .search-bar-button {
   height: 60px;
-    -webkit-box-shadow: 5px 10px 4px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 10px 4px rgba(0,0,0,0.2);
-    -o-box-shadow: 0px 10px 4px rgba(0,0,0,0.2);
-    -ms-box-shadow: 0px 10px 4px rgba(0,0,0,0.2);
-    box-shadow: 5px 10px 4px rgba(0,0,0,0.2);
-    border-color: #25a04178;
-    color: #fff;
-    background-color: #25a041e0;
+  -webkit-box-shadow: 5px 10px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 10px 4px rgba(0, 0, 0, 0.2);
+  border-color: #25a04178;
+  color: #fff;
+  background-color: #25a041e0;
 }
 
 .search-bar-button:hover {
   background-color: #428fa7e3;
   color: #fff;
   border-color: #f3ffff85;
-  
+
 }
 
 .filtered-city-button {
@@ -380,20 +389,22 @@ input[type=number] {
 }
 
 .fa-info-circle {
-    color: #6c757dc2;
-    border-radius: 2em;
-    -webkit-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-    -moz-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-    -o-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-    -ms-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+  color: #6c757dc2;
+  border-radius: 2em;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .fa-info-circle:hover {
-    color: #fff;
-    border-radius: 2em;
-    cursor: help;
+  color: #fff;
+  border-radius: 2em;
+  cursor: help;
 }
+
+/*  smaller screen css styling  */
 
 @media (max-width: 767px) {
   #listing {
@@ -406,21 +417,21 @@ input[type=number] {
     height: 100%;
   }
   #map {
-    height: 650px;  
-    width: 100%;  
+    height: 650px;
+    width: 100%;
   }
   .search-margin {
     margin-top: 2em;
   }
   .navbar-toggler-icon {
-  width: 1.5em;
-  height: 1.5em;
+    width: 1.5em;
+    height: 1.5em;
   }
   .search-bar-header {
     text-align: center;
     font-size: 25px;
     color: #fff;
-}  
+  }
   .search-bar-sub-header {
     text-align: center;
     font-size: 15px;
@@ -429,21 +440,15 @@ input[type=number] {
 }
 
 
+/*  general page behaviour  */
+
 
 html {
   scroll-behavior: smooth;
-  
-}
 
-body {
-  overflow-x: hidden;
 }
 
 .row {
-    margin-right: auto;
-    margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
-
-
-
-
