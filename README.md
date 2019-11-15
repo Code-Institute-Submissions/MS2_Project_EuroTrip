@@ -53,8 +53,6 @@ As a result of this the below wireframes consist largely of only 2 mock-up drawi
   - Used for the navbar, also the modal and to simplify DOM manipulation.
 - [Popper.js](https://popper.js.org/)
   - A reference JS needed for the navbar & modal.
-- [Google Fonts](https://fonts.google.com/)
-  - Utilised to style the fonts on the site.
 - [FontAwesome](https://fontawesome.com/start)
   - The site used BootstrapCDN to provide icons from FontAwesome.
 - [Autoprefixer](https://autoprefixer.github.io/)

@@ -86,7 +86,7 @@ input[type=number] {
 }
 
 
-/*   Google maps section   ---------------------------   */
+/*   Google maps section   */
 
 #searchMap {
   background-color: #e2f3f75c;
@@ -160,6 +160,7 @@ input[type=number] {
 
 /* Trending Section -------------*/
 
+
 .main-explore-button {
   text-align: center;
 }
@@ -170,6 +171,7 @@ input[type=number] {
 }
 
 /*   Carousel section      */      
+      
       
 /*below ipad screen size only one slide card shown*/
 
@@ -262,6 +264,7 @@ input[type=number] {
     height: 500px;
     width: 80%;
 }
+
 
 /*--footer--*/
 
@@ -407,8 +410,22 @@ input[type=number] {
     width: 100%;  
   }
   .search-margin {
-    margin-top: 1em;
-}
+    margin-top: 2em;
+  }
+  .navbar-toggler-icon {
+  width: 1.5em;
+  height: 1.5em;
+  }
+  .search-bar-header {
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+}  
+  .search-bar-sub-header {
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+  }
 }
 
 
