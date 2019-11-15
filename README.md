@@ -38,11 +38,11 @@ As a result of this the below wireframes consist largely of only 2 mock-up drawi
 - Footer
   - xs-xl screen
 - Home
-  - xs-sm screen
-  - md-xl screen
+  - xs screen
+  - sm-xl screen
 - Google maps
-  - xs-sm screen
-  - md-xl screen
+  - xs screen
+  - sm-xl screen
 
 ### **Technologies:**
 
@@ -84,7 +84,7 @@ The user can click on an icon and information about the place is returned, inclu
 
 #### Trending:
 
-This section is for users that have a flexible budget and an open mind to where they want to go. It consists of 6 destinations that are currently very popular with tourists and gives a brief description of them and the highlights of what they are known for. A carousel feature is utilised here with arrows acting as buttons to allow the user to browse through the different destinations and see what they have to offer. An animation is also in place which moves the cards along itself without any input from the user. 
+This section is for users that have a flexible budget and an open mind to where they want to go. It consists of 6 destinations that are currently very popular with tourists and gives a brief description of them and the highlights of what they are known for. A carousel feature is utilised here with arrows acting as buttons to allow the user to browse through the different destinations and see what they have to offer. An animation is also in place which moves the cards along itself without any input from the user. They also zoom in slowly on the pictures and a shadow is added so that the user knows which card they are hovering over.
 
 ### Features left to implement:
 
